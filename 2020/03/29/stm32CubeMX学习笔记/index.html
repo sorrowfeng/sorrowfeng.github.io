@@ -8,17 +8,19 @@
   <link rel="dns-prefetch" href="https://sorrowfeng.github.io">
   <title>stm32CubeMX学习笔记 | 木风可可</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="常用的是推挽输出和上拉输入 代码写在各个begin和end之间，才不会在重新生成工程的时候被清除掉 开始操作io123456读引脚，返回值为GPIO_PIN_RESET 和GPIO_PIN_SET &#x2F;&#x2F;可以直接写成0和1GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);写引脚，GPIO_PinState的">
+  <meta name="description" content="开始">
 <meta property="og:type" content="article">
 <meta property="og:title" content="stm32CubeMX学习笔记">
 <meta property="og:url" content="https://sorrowfeng.github.io/2020/03/29/stm32CubeMX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="木风可可">
-<meta property="og:description" content="常用的是推挽输出和上拉输入 代码写在各个begin和end之间，才不会在重新生成工程的时候被清除掉 开始操作io123456读引脚，返回值为GPIO_PIN_RESET 和GPIO_PIN_SET &#x2F;&#x2F;可以直接写成0和1GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);写引脚，GPIO_PinState的">
+<meta property="og:description" content="开始">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sorrowfeng.github.io/img/picture3.jpg">
 <meta property="article:published_time" content="2020-03-29T10:28:41.594Z">
-<meta property="article:modified_time" content="2020-03-29T10:53:54.896Z">
+<meta property="article:modified_time" content="2020-03-29T12:04:52.480Z">
 <meta property="article:author" content="一色いろは">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sorrowfeng.github.io/img/picture3.jpg">
   
     <link rel="alternative" href="/atom.xml" title="木风可可" type="application/atom+xml">
   
@@ -167,11 +169,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p><img src="/img/picture3.jpg" alt="avatar"></p>
+<a id="more"></a>
+
 <p>常用的是推挽输出和上拉输入</p>
 <p>代码写在各个begin和end之间，才不会在重新生成工程的时候被清除掉</p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h2 id="操作io"><a href="#操作io" class="headerlink" title="操作io"></a>操作io</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">读引脚，返回值为GPIO_PIN_RESET 和GPIO_PIN_SET //可以直接写成0和1</span><br><span class="line">GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);</span><br><span class="line">写引脚，GPIO_PinState的可用性为GPIO_PIN_RESET 和GPIO_PIN_SET //可用性最好不要写0和1</span><br><span class="line">void HAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);</span><br><span class="line">翻转引脚电平</span><br><span class="line">void HAL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);</span><br></pre></td></tr></table></figure>
+<h2 id="操作io"><a href="#操作io" class="headerlink" title="操作io"></a>操作io</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">读引脚，返回值为GPIO_PIN_RESET 和GPIO_PIN_SET //可以直接写成0和1</span><br><span class="line">GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);</span><br><span class="line">写引脚，GPIO_PinState的可用性为GPIO_PIN_RESET 和GPIO_PIN_SET //可用性最好不要写0和1</span><br><span class="line">void HAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);</span><br><span class="line">翻转引脚电平</span><br><span class="line">void HAL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);</span><br></pre></td></tr></table></figure>
 
-<a id="more"></a>
 
 <h2 id="外部中断"><a href="#外部中断" class="headerlink" title="外部中断"></a>外部中断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1.将引脚配置为GPIO_EXTI13，配置后在RCC选项中还要去使能NVIC</span><br><span class="line">2.重写中断回调函数的实现，写在main函数外的begin和end之间</span><br><span class="line">void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) &#123;</span><br><span class="line">	if(GPIO_Pin &#x3D;&#x3D; GPIO_PIN_13) &#123;           &#x2F;&#x2F;判断是否为对应的外部中断引脚</span><br><span class="line">		&#x2F;&#x2F;写逻辑</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	if(GPIO_Pin &#x3D;&#x3D; GPIO_PIN_5) &#123;           &#x2F;&#x2F;不同引脚的外部中断写在用一个回调函数里面</span><br><span class="line">		&#x2F;&#x2F;写逻辑</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
