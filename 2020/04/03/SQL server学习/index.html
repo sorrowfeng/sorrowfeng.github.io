@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sorrowfeng.github.io/img/picture9.jpg">
 <meta property="article:published_time" content="2020-04-03T14:24:52.000Z">
-<meta property="article:modified_time" content="2020-04-03T14:24:53.070Z">
+<meta property="article:modified_time" content="2020-04-03T14:27:07.256Z">
 <meta property="article:author" content="一色いろは">
 <meta property="article:tag" content="SQL server - 学习笔记">
 <meta name="twitter:card" content="summary">
@@ -219,8 +219,7 @@
 
 <h4 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">内连接</span><br><span class="line">select * from emp ,dept  【行数是两表的行数相乘，列数是列数相加】</span><br><span class="line">和select * from dept ，emp 相同【笛卡尔积emp的所有数据分别和dept中的每个数据组合一遍】</span><br><span class="line"></span><br><span class="line">select * from emp ,dept </span><br><span class="line">	<span class="built_in">where</span> empno = 7369   【输出5行11列记录，从上面的临时表笛卡尔积中过滤】</span><br><span class="line">	</span><br><span class="line">select  <span class="string">"E"</span> .ename <span class="string">"员工姓名"</span>,<span class="string">"D"</span>. dname <span class="string">"员工部门"</span>  --输出<span class="string">"E"</span>即emp表中的ename，并取名为<span class="string">"员工姓名"</span></span><br><span class="line">	from emp <span class="string">"E"</span>  --给emp表取个别名</span><br><span class="line">	join dept <span class="string">"D"</span> --join是连接</span><br><span class="line">	on <span class="string">"E"</span> .deptno =<span class="string">"D"</span> .deptno    --on为连接条件    ，【有join就必须有on】</span><br><span class="line">							   --条件为E与D表中的deptno相同</span><br><span class="line"></span><br><span class="line">select <span class="string">"E"</span>.ename <span class="string">"员工姓名"</span> ,<span class="string">"D"</span>.deptno <span class="string">"员工部门"</span> ,<span class="string">"S"</span> .grade <span class="string">"工资等级"</span> </span><br><span class="line">	from emp <span class="string">"E"</span></span><br><span class="line">	join dept <span class="string">"D"</span></span><br><span class="line">	on <span class="string">"E"</span>.deptno=<span class="string">"D"</span>.deptno          【连接三个表，用两个join on】</span><br><span class="line">	join SALGRADE <span class="string">"S"</span></span><br><span class="line">	on <span class="string">"E"</span>.sal&gt;=  <span class="string">"S"</span>.losal and <span class="string">"E"</span>.sal&lt;=<span class="string">"S"</span>.HISAL   </span><br><span class="line">	--on <span class="string">"E"</span>.sal between <span class="string">"S"</span>.losal and <span class="string">"S"</span>.HISAL   【用between也可以】	</span><br><span class="line">外连接</span><br><span class="line">	用左表的第一行与右表所有航进行连接，然后再用第二行进行连接，依次类推</span><br><span class="line">	select * from emp <span class="string">"E"</span>			--左外连接，例子为emp在左边</span><br><span class="line">		left join dept <span class="string">"D"</span></span><br><span class="line">			on <span class="string">"E"</span>.deptno=<span class="string">"D"</span>.deptno</span><br><span class="line">完全连接</span><br><span class="line">	两个表中匹配所有行记录，如果左边没有找到匹配的记录，那么左边为空，类此右边为空</span><br><span class="line">	full join……</span><br><span class="line">	on ……</span><br><span class="line">交叉连接</span><br><span class="line">	select * from dept D		--只是做笛卡尔积</span><br><span class="line">		cross join emp E</span><br><span class="line">自连接</span><br><span class="line">	一张表和自己连接起来查询数据</span><br><span class="line">	select * from emp <span class="string">"E1"</span> , emp <span class="string">"E2"</span></span><br><span class="line">联合 union【若干个select子句的列数要是相同的，类型要兼容】</span><br><span class="line">	select <span class="string">"E1"</span>.ename ,<span class="string">"E1"</span>.sal, <span class="string">"E2"</span>.ename</span><br><span class="line">		from emp <span class="string">"E1"</span></span><br><span class="line">		join emp <span class="string">"E2"</span></span><br><span class="line">		on <span class="string">"E1"</span>.mgr = <span class="string">"E2"</span>.EMPNO</span><br><span class="line">	union  --联合，表和表之间的数据以纵向的方式连接</span><br><span class="line">	select ename,sal,<span class="string">'最大老板'</span></span><br><span class="line">		from emp</span><br><span class="line">		<span class="built_in">where</span> mgr is null</span><br></pre></td></tr></table></figure>
 
-<h4 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[分页查询](/text/联合与分页查询.sql)</span><br></pre></td></tr></table></figure>
-
+<h4 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h4><p><a href="/text/联合与分页查询.sql">分页查询</a></p>
 <h3 id="索引（针对列）"><a href="#索引（针对列）" class="headerlink" title="索引（针对列）"></a>索引（针对列）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">聚集索引	</span><br><span class="line">	一个表中有且仅有一个（一般以主键创建，默认会自动创建一个）</span><br><span class="line">非聚集索引</span><br><span class="line">	自己建的叫非聚集索引</span><br><span class="line">	create index emp_index_sal on emp(sal)	对工资列创建索引</span><br><span class="line">	drop index emp_index_sal on emp			删除索引</span><br><span class="line"></span><br><span class="line">如果索引碎片小于30%使用索引重组，大于30%使用索引重建</span><br><span class="line">alter index emp_index_sal on emp reorganize --重组索引</span><br><span class="line">alter index all on emp reorganize	--对所有索引重组</span><br><span class="line">alter index emp_index_sal on emp rebuild	  --重建索引</span><br><span class="line">alter index all on emp rebuild		--对所有索引重建</span><br></pre></td></tr></table></figure>
 
 <h3 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">【可以避免书写大量重复代码，简化查询，更方便】</span><br><span class="line">	create view v<span class="variable">$_emp</span>    【创建一个名为v<span class="variable">$_emp</span>的临时表】</span><br><span class="line">	as</span><br><span class="line">	select deptno ,avg(sal) <span class="string">"平均工资"</span></span><br><span class="line">		from emp	</span><br><span class="line">		group by deptno</span><br><span class="line"></span><br><span class="line">	create view v<span class="variable">$_emp</span>		--视图就是一个临时表</span><br><span class="line">	as</span><br><span class="line">	select deptno as 部门编号,avg(sal) as 平均工资</span><br><span class="line">		from emp</span><br><span class="line">		group by deptno</span><br><span class="line">	GO	--用于隔离，在视图下方有波浪线时，用GO隔离</span><br><span class="line">	select * from v<span class="variable">$_emp</span></span><br><span class="line"></span><br><span class="line">	drop view v<span class="variable">$_emp</span>	删除视图</span><br></pre></td></tr></table></figure>
@@ -478,7 +477,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AutoCAD</a>
+                <a href="javascript:void(0)" class="js-tag color4">C++</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -486,7 +485,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C++</a>
+                <a href="javascript:void(0)" class="js-tag color3">AutoCAD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Golang</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,6 +498,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">SQL server - 学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">stm32</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -515,14 +522,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">计算机三级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">stm32</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Golang</a>
               </li>
             
             <div class="clearfix"></div>
