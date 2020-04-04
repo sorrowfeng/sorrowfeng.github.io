@@ -6,23 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://sorrowfeng.github.io">
-  <title>stm32cubemx学习 | 木风可可</title>
+  <title>Archives | 木风可可</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="stm32CubeMX">
-<meta property="og:type" content="article">
-<meta property="og:title" content="stm32cubemx学习">
-<meta property="og:url" content="https://sorrowfeng.github.io/2020/04/03/stm32CubeMX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+  <meta name="description" content="木风可可的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="木风可可">
+<meta property="og:url" content="https://sorrowfeng.github.io/archives/page/2/index.html">
 <meta property="og:site_name" content="木风可可">
-<meta property="og:description" content="stm32CubeMX">
+<meta property="og:description" content="木风可可的博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sorrowfeng.github.io/img/picture3.jpg">
-<meta property="article:published_time" content="2020-04-03T02:16:29.000Z">
-<meta property="article:modified_time" content="2020-04-03T02:16:31.602Z">
 <meta property="article:author" content="一色いろは">
-<meta property="article:tag" content="学习笔记">
-<meta property="article:tag" content="stm32">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://sorrowfeng.github.io/img/picture3.jpg">
   
     <link rel="alternative" href="/atom.xml" title="木风可可" type="application/atom+xml">
   
@@ -150,222 +144,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-stm32CubeMX学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      stm32cubemx学习
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/04/01/%E5%BC%80%E8%BD%A6%E6%8C%87%E5%8D%97/" class="archive-article-date">
+  	<time datetime="2020-04-01T02:00:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/01/%E5%BC%80%E8%BD%A6%E6%8C%87%E5%8D%97/">开 车 指 南</a>
     </h1>
   
 
-        
-        <a href="/2020/04/03/stm32CubeMX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-04-03T02:16:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="stm32CubeMX"><a href="#stm32CubeMX" class="headerlink" title="stm32CubeMX"></a>stm32CubeMX</h2><p><img src="/img/picture3.jpg" alt="avatar"></p>
-<a id="more"></a>
-
-<p>常用的是推挽输出和上拉输入</p>
-<p>代码写在各个begin和end之间，才不会在重新生成工程的时候被清除掉</p>
-<h2 id="操作io"><a href="#操作io" class="headerlink" title="操作io"></a>操作io</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">读引脚，返回值为GPIO_PIN_RESET 和GPIO_PIN_SET //可以直接写成0和1</span><br><span class="line">GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);</span><br><span class="line">写引脚，GPIO_PinState的可用性为GPIO_PIN_RESET 和GPIO_PIN_SET //可用性最好不要写0和1</span><br><span class="line">void HAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);</span><br><span class="line">翻转引脚电平</span><br><span class="line">void HAL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="外部中断"><a href="#外部中断" class="headerlink" title="外部中断"></a>外部中断</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1.将引脚配置为GPIO_EXTI13，配置后在RCC选项中还要去使能NVIC</span><br><span class="line">2.重写中断回调函数的实现，写在main函数外的begin和end之间</span><br><span class="line">void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) &#123;</span><br><span class="line">	if(GPIO_Pin &#x3D;&#x3D; GPIO_PIN_13) &#123;           &#x2F;&#x2F;判断是否为对应的外部中断引脚</span><br><span class="line">		&#x2F;&#x2F;写逻辑</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	if(GPIO_Pin &#x3D;&#x3D; GPIO_PIN_5) &#123;           &#x2F;&#x2F;不同引脚的外部中断写在用一个回调函数里面</span><br><span class="line">		&#x2F;&#x2F;写逻辑</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1.设置时钟源clock source 为 internal clock</span><br><span class="line">2.设置参数prescaler与counter period，定时时间&#x3D;(prescaler+1  *  period+1)&#x2F;时钟频率</span><br><span class="line">	例：(31999+1   *   499+1 )&#x2F;32000000&#x3D;定时时间为0.5s</span><br><span class="line">3.使能NVIC 设置</span><br><span class="line"></span><br><span class="line">4.重写定时器回调函数</span><br><span class="line">void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) &#123;</span><br><span class="line">	if(htim-&gt;Instance &#x3D;&#x3D; TIM2) &#123;          &#x2F;&#x2F;写定时器2的逻辑函数</span><br><span class="line">		&#x2F;&#x2F;写逻辑</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	if(htim-&gt;Instance &#x3D;&#x3D; TIM3) &#123;         &#x2F;&#x2F;不同定时器的逻辑函数写在用一个回调函数里面</span><br><span class="line">		&#x2F;&#x2F;写逻辑</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">5.启动定时器，写在定时器初始化后的注释中</span><br><span class="line">HAL_TIM_Base_Start_IT(&amp;htim2);</span><br></pre></td></tr></table></figure>
-
-<h2 id="串口"><a href="#串口" class="headerlink" title="串口"></a>串口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1.connectivity-USART1配置串口</span><br><span class="line">	模式Asynchronous（异步）</span><br><span class="line">	配置好波特率以及串口的模式（发送与接收）</span><br><span class="line">2.使能NVIC 设置</span><br><span class="line">3.初始化发送与接收数据的位置，写在串口初始化的后面</span><br><span class="line">	HAL_UART_Transmit(&amp;huart1, Tx_str1, sizeof(Tx_str1), 10000);&#x2F;&#x2F;阻塞式发送</span><br><span class="line">	HAL_UART_Receive_IT(&amp;huart1, &amp;Rx_dat, 1);&#x2F;&#x2F;非阻塞式接收</span><br><span class="line">3.重写发送或接收完毕中断回调函数</span><br><span class="line">void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) &#123;&#x2F;&#x2F;接收完毕中断回调函数</span><br><span class="line">	if(huart-&gt;Instance &#x3D;&#x3D; USART1) &#123;</span><br><span class="line">		if(Rx_dat &#x3D;&#x3D; 0x51) &#123;</span><br><span class="line">			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="串口常用函数"><a href="#串口常用函数" class="headerlink" title="串口常用函数"></a>串口常用函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">HAL库中串口发送的重要函数</span><br><span class="line">■阻塞式发送函数(初学者，推荐使用)</span><br><span class="line">HAL_Status TypeDef HAL_UART_Transmit(UART_Handle TypeDef *huart,</span><br><span class="line">									uint8_t *pData,</span><br><span class="line">									uint16_t Size,</span><br><span class="line">									uint32_t Timeout);</span><br><span class="line">■非阻塞式发送函数</span><br><span class="line">HAL_StatusTypeDef HAL_UART_Transmit_IT(UART_Handle TypeDef *huart,</span><br><span class="line">									uint8_t *pData,</span><br><span class="line">									uint16_t Size);</span><br><span class="line">■发送完毕中断回调函数</span><br><span class="line">void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart);</span><br><span class="line">void HAL_UART_TxHalfCpltCallback(UART_Handle TypeDef *huart);</span><br><span class="line"></span><br><span class="line">HAL库中串口接收的重要函数</span><br><span class="line">■阻塞式接收函数</span><br><span class="line">HAL_StatusTypeDef HAL_UART_Receive(UART_Handle&#39; TypeDef *huart,</span><br><span class="line">									uint8_t *pData,</span><br><span class="line">									uint16_t Size,</span><br><span class="line">									uint32_t Timeout);</span><br><span class="line">■非阻塞式接收函数(推荐使用)</span><br><span class="line">HAL_StatusTypeDef HAL_UART_Receive_JT(UART_Handle TypeDef *huart,</span><br><span class="line">									uint8_t *pData,</span><br><span class="line">									uint16_t Size);</span><br><span class="line">■接收完毕中断回调函数</span><br><span class="line">void HAL_UART_RxCpltCallback(UART_Handle TypeDef *huart);</span><br><span class="line">void HAL_UART_RxHalfCpltCallback(UART_Handle TypeDef *huart);</span><br></pre></td></tr></table></figure>
-
-<h2 id="ADC"><a href="#ADC" class="headerlink" title="ADC"></a>ADC</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">从PA0到PB1有十个通道可供选择（f103）</span><br><span class="line">如需要使用中断要打开中断使能</span><br><span class="line"></span><br><span class="line">查询法</span><br><span class="line">void ADC_GetValue() &#123;</span><br><span class="line">	HAL_ADC_Start(&amp;hadc1);			&#x2F;&#x2F;开启adc</span><br><span class="line">	LED_ON();</span><br><span class="line">	if(HAL_OK &#x3D;&#x3D; HAL_ADC_PollForConversion(&amp;hadc1, 10)) &#123;&#x2F;&#x2F;转换查询adc是否转换ok</span><br><span class="line">		ADC_Value &#x3D; HAL_ADC_GetValue(&amp;hadc1);</span><br><span class="line">		ADC_Volt &#x3D; ADC_Value * 3300 &#x2F; 4096;      &#x2F;&#x2F;电压值 &#x3D; 采样值 * 3.3v &#x2F; 2的12次方</span><br><span class="line">	&#125;</span><br><span class="line">	UART_SendInfo();</span><br><span class="line">	LED_OFF();</span><br><span class="line">	HAL_ADC_Stop(&amp;hadc1);			&#x2F;&#x2F;关闭adc</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">中断法</span><br><span class="line">void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) &#123;</span><br><span class="line">	if(hadc-&gt;Instance &#x3D;&#x3D; ADC1) &#123;</span><br><span class="line">		ADC_Value &#x3D; HAL_ADC_GetValue(&amp;hadc1);</span><br><span class="line">		ADC_Volt &#x3D; ADC_Value * 3300 &#x2F; 4096;			&#x2F;&#x2F;电压值 &#x3D; 采样值 * 3.3v &#x2F; 2的12次方 </span><br><span class="line">		UART_SendInfo();</span><br><span class="line">		LED_OFF();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">在主函数中执行adc的打开 HAL_ADC_Start_IT(&amp;hadc1);</span><br></pre></td></tr></table></figure>
-
-<h2 id="OLED"><a href="#OLED" class="headerlink" title="OLED"></a>OLED</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在头文件文件夹中有oled对应的stm32cube对应的头文件</span><br><span class="line">确认好配置移植进工程就可以了</span><br></pre></td></tr></table></figure>
-<p>文件下载地址: <a href="https://www.lanzous.com/iarn6yf" target="_blank" rel="noopener">点击下载</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>请支持一包辣条吧<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/zhifubao.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/weixin.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">stm32</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开车</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://sorrowfeng.github.io/2020/04/03/stm32CubeMX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/04/03/%E4%BA%9A%E7%B4%A2%E7%A8%B3%E5%AE%9A%E7%A9%BF%E5%A4%A7%E9%B8%9F%E6%95%99%E5%AD%A6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          亚索技巧
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/04/03/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Linux学习</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#stm32CubeMX"><span class="toc-number">1.</span> <span class="toc-text">stm32CubeMX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#操作io"><span class="toc-number">2.</span> <span class="toc-text">操作io</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#外部中断"><span class="toc-number">3.</span> <span class="toc-text">外部中断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#定时器"><span class="toc-number">4.</span> <span class="toc-text">定时器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#串口"><span class="toc-number">5.</span> <span class="toc-text">串口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#串口常用函数"><span class="toc-number">6.</span> <span class="toc-text">串口常用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ADC"><span class="toc-number">7.</span> <span class="toc-text">ADC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OLED"><span class="toc-number">8.</span> <span class="toc-text">OLED</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/">&amp;laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -389,8 +224,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
