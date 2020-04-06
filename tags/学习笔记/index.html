@@ -41,7 +41,8 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #4d4d4d">
+</div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -84,12 +85,89 @@
 					<a class="mail" target="_blank" href="https://1399600304@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
-		<!-- 网易云音乐插件 -->
-		
-		    <div style="position:absolute; bottom:120px left:auto; width:50%">
-		        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=27876224&auto=1&height=66"></iframe>
-		    </div>
-		
+		<!-- APlayer音乐播放器 -->
+			
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+			<!-- // 这里div的样式是笔者自己修改过的，你可以直接使用APlayer官方的原配置：-->
+			<!-- <div id="aplayer" style="position:absolute;left;0;bottom:0;"></div> -->
+			<div id="aplayer"></div> 
+			<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+			<script>
+			    const ap = new APlayer({
+			        container: document.getElementById('aplayer'),
+			        autoplay: true,
+			        listFolded: true,
+			        listMaxHeight: 90,
+			        order: 'list',
+			        loop: 'all',
+			        theme: '#b7daff',
+			        preload: 'none',
+			        mutex: true,
+			        lrcType: 3,
+			        volume: 0.7,
+			        fixed: true,
+			        audio: [{
+			                name: 'God knows...',
+			                artist: '平野綾',
+			                lrc: '',
+			                cover: 'https://p1.music.126.net/6wOX7u8h6_HdtxeLxz9AxA==/2022001883517029.jpg?param=300y300',
+			                url: 'http://m10.music.126.net/20200406142016/02fe848bc1d47dc58c1dd41645f39f3e/ymusic/e8bd/57cc/2053/acb113ed7f943acd52dbecbf3817fa79.mp3'
+			            },
+			            {
+			                name: 'summertime',
+			                artist: 'cinnamons,evening cinema',
+			                lrc: '',
+			                cover: 'https://p1.music.126.net/YOh14VmZHW6riDYUeIkjeA==/109951163115353027.jpg?param=300y300',
+			                url: 'http://m10.music.126.net/20200406142035/1fbd81965c0619c6c8f745592ff6de7f/ymusic/74fc/e215/5b6c/a2217fc63242aeba13b77a6842f4da60.mp3'
+			            },
+			            {
+			                name: '天使にふれたよ!',
+			                artist: '豊崎愛生,日笠陽子,佐藤聡美,寿美菜子',
+			                lrc: '',
+			                cover: 'https://p1.music.126.net/B_sCLXthAHgoVEMIRNU1hw==/109951163559682176.jpg?param=300y300',
+			                url: 'http://m10.music.126.net/20200406140740/e668007314eb3e34c2b185e2f8b4ffa9/ymusic/79f8/feee/e43d/401d6dea3cdf82b70af1eb2492db06e5.mp3'
+			            },
+			            {
+			                name: '熱き決闘者たち',
+			                artist: '光宗信吉',
+			                lrc: '',
+			                cover: 'https://p1.music.126.net/5alN2JmNNd0RTUjM2LOpFg==/109951164659403167.jpg?param=300y300',
+			                url: 'http://m10.music.126.net/20200406141056/617503054367754013cf3547141da7a8/ymusic/010f/0253/0f0e/6e7d4db072592f7cb7bb8d00a7fed2cc.mp3'
+			            },
+			            {
+			                name: '打上花火',
+			                artist: 'DAOKO/米津玄師',
+			                lrc: '',
+			                cover: 'https://p1.music.126.net/ZUCE_1Tl_hkbtamKmSNXEg==/109951163009282836.jpg?param=300y300',
+			                url: 'http://m10.music.126.net/20200406141637/6d25bd383b8d1cf734c15097dc437338/ymusic/4f30/74de/3a9a/14d52961873ff2d48f2f61974be53ac6.mp3'
+			            },
+			            {
+			                name: 'Lemon',
+			                artist: '米津玄師',
+			                lrc: '',
+			                cover: 'https://p1.music.126.net/6IeZ9MiSSDXifj74nzH6ww==/109951163561494000.jpg?param=300y300',
+			                url: 'http://m10.music.126.net/20200406141828/6ef0b91bd3b5926e2a6184715bd15a3b/ymusic/6eed/4ef2/d8ae/b85b958a70552f7e002e33d35075086c.mp3'
+			            }
+			        ]
+			    });
+
+			    <!-- 根据封面自适应主题色 -->
+			    const colorThief = new ColorThief();
+			    const setTheme = (index) => {
+			        if (!ap.list.audios[index].theme) {
+			            colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+			                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+			            });
+			        }
+			    };
+			    setTheme(ap.list.index);
+			    ap.on('listswitch', (data) => {
+			        setTheme(data.index);
+			    });
+			</script>
+			
+		<!-- 左侧边栏添加--APlayer音乐播放器》 -->
 		</nav>
 	</header>		
 </div>
@@ -690,11 +768,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">开车</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机三级</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机三级</a>
+                <a href="javascript:void(0)" class="js-tag color3">开车</a>
               </li>
             
             <div class="clearfix"></div>
