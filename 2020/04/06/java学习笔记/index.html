@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sorrowfeng.github.io/img/picture10.jpg">
 <meta property="article:published_time" content="2020-04-06T08:51:51.000Z">
-<meta property="article:modified_time" content="2020-04-06T08:51:53.736Z">
+<meta property="article:modified_time" content="2020-04-07T07:19:48.775Z">
 <meta property="article:author" content="一色いろは">
 <meta property="article:tag" content="学习笔记">
 <meta property="article:tag" content="java">
@@ -258,6 +258,35 @@
         
       </header>
     
+    
+    <!-- 目录内容 -->
+    
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+        <div id="toc-article" class="toc-article">
+            <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+            <strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#java"><span class="toc-number">1.</span> <span class="toc-text">java</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#操作"><span class="toc-number">1.1.</span> <span class="toc-text">操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型"><span class="toc-number">1.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算"><span class="toc-number">1.3.</span> <span class="toc-text">计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#break-continue"><span class="toc-number">1.4.</span> <span class="toc-text">break continue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch"><span class="toc-number">1.5.</span> <span class="toc-text">switch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一些关系"><span class="toc-number">1.6.</span> <span class="toc-text">一些关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类规则"><span class="toc-number">1.7.</span> <span class="toc-text">类规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命名规则"><span class="toc-number">1.8.</span> <span class="toc-text">命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问控制符"><span class="toc-number">1.9.</span> <span class="toc-text">访问控制符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造函数"><span class="toc-number">1.10.</span> <span class="toc-text">构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的重载"><span class="toc-number">1.11.</span> <span class="toc-text">函数的重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#boolean类型用-b来输出"><span class="toc-number">1.12.</span> <span class="toc-text">boolean类型用%b来输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#this指针："><span class="toc-number">1.13.</span> <span class="toc-text">this指针：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态static："><span class="toc-number">1.14.</span> <span class="toc-text">静态static：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#继承extends："><span class="toc-number">1.15.</span> <span class="toc-text">继承extends：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#super"><span class="toc-number">1.16.</span> <span class="toc-text">super</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重写父类的方法注意事项"><span class="toc-number">1.17.</span> <span class="toc-text">重写父类的方法注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多态："><span class="toc-number">1.18.</span> <span class="toc-text">多态：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽象类："><span class="toc-number">1.19.</span> <span class="toc-text">抽象类：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final"><span class="toc-number">1.20.</span> <span class="toc-text">final</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#interface接口"><span class="toc-number">1.21.</span> <span class="toc-text">interface接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打包package："><span class="toc-number">1.22.</span> <span class="toc-text">打包package：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#import"><span class="toc-number">1.23.</span> <span class="toc-text">import</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#归档工具jar（打包命令）："><span class="toc-number">1.24.</span> <span class="toc-text">归档工具jar（打包命令）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异常处理"><span class="toc-number">1.25.</span> <span class="toc-text">异常处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java-lang"><span class="toc-number">1.26.</span> <span class="toc-text">java.lang</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#try-catch-与-throws"><span class="toc-number">1.27.</span> <span class="toc-text">try&#x2F;catch 与 throws</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#catch："><span class="toc-number">1.28.</span> <span class="toc-text">catch：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object类"><span class="toc-number">1.29.</span> <span class="toc-text">Object类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#equals"><span class="toc-number">1.30.</span> <span class="toc-text">equals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String类常用方法"><span class="toc-number">1.31.</span> <span class="toc-text">String类常用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组"><span class="toc-number">1.32.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线程Thread"><span class="toc-number">1.33.</span> <span class="toc-text">线程Thread</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Event"><span class="toc-number">1.34.</span> <span class="toc-text">Event</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Override"><span class="toc-number">1.35.</span> <span class="toc-text">@Override</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#str-int-“”-将int转字符串"><span class="toc-number">1.36.</span> <span class="toc-text">str &#x3D; int + “”;将int转字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内部类与匿名类"><span class="toc-number">1.37.</span> <span class="toc-text">内部类与匿名类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成可执行jar文件："><span class="toc-number">1.38.</span> <span class="toc-text">生成可执行jar文件：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#流"><span class="toc-number">1.39.</span> <span class="toc-text">流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象序列化"><span class="toc-number">1.40.</span> <span class="toc-text">对象序列化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重写hashCode-与equals"><span class="toc-number">1.41.</span> <span class="toc-text">重写hashCode()与equals()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lterator接口"><span class="toc-number">1.42.</span> <span class="toc-text">lterator接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型"><span class="toc-number">1.43.</span> <span class="toc-text">泛型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络编程（Socket编程）"><span class="toc-number">1.44.</span> <span class="toc-text">网络编程（Socket编程）</span></a></li></ol></li></ol>
+             </div>
+       <script type="text/javascript">
+        function showToc(){
+            var toc_article = document.getElementById("toc-article");
+            var show_toc_btn = document.getElementById("show-toc-btn");
+            toc_article.setAttribute("style","display:block");
+            show_toc_btn.setAttribute("style","display:none");
+            };
+        function showBtn(){
+            var toc_article = document.getElementById("toc-article");
+            var show_toc_btn = document.getElementById("show-toc-btn");
+            toc_article.setAttribute("style","display:none");
+            show_toc_btn.setAttribute("style","display:block");
+            };
+       </script>
+          
+    <!-- 目录内容结束 -->
+
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><p><img src="/img/picture10.jpg" alt="avatar"></p>
@@ -488,19 +517,6 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#java"><span class="toc-number">1.</span> <span class="toc-text">java</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#操作"><span class="toc-number">1.1.</span> <span class="toc-text">操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型"><span class="toc-number">1.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计算"><span class="toc-number">1.3.</span> <span class="toc-text">计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#break-continue"><span class="toc-number">1.4.</span> <span class="toc-text">break continue</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch"><span class="toc-number">1.5.</span> <span class="toc-text">switch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一些关系"><span class="toc-number">1.6.</span> <span class="toc-text">一些关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类规则"><span class="toc-number">1.7.</span> <span class="toc-text">类规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命名规则"><span class="toc-number">1.8.</span> <span class="toc-text">命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问控制符"><span class="toc-number">1.9.</span> <span class="toc-text">访问控制符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造函数"><span class="toc-number">1.10.</span> <span class="toc-text">构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的重载"><span class="toc-number">1.11.</span> <span class="toc-text">函数的重载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#boolean类型用-b来输出"><span class="toc-number">1.12.</span> <span class="toc-text">boolean类型用%b来输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#this指针："><span class="toc-number">1.13.</span> <span class="toc-text">this指针：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态static："><span class="toc-number">1.14.</span> <span class="toc-text">静态static：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#继承extends："><span class="toc-number">1.15.</span> <span class="toc-text">继承extends：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#super"><span class="toc-number">1.16.</span> <span class="toc-text">super</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重写父类的方法注意事项"><span class="toc-number">1.17.</span> <span class="toc-text">重写父类的方法注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多态："><span class="toc-number">1.18.</span> <span class="toc-text">多态：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽象类："><span class="toc-number">1.19.</span> <span class="toc-text">抽象类：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#final"><span class="toc-number">1.20.</span> <span class="toc-text">final</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#interface接口"><span class="toc-number">1.21.</span> <span class="toc-text">interface接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打包package："><span class="toc-number">1.22.</span> <span class="toc-text">打包package：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#import"><span class="toc-number">1.23.</span> <span class="toc-text">import</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#归档工具jar（打包命令）："><span class="toc-number">1.24.</span> <span class="toc-text">归档工具jar（打包命令）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异常处理"><span class="toc-number">1.25.</span> <span class="toc-text">异常处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#java-lang"><span class="toc-number">1.26.</span> <span class="toc-text">java.lang</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#try-catch-与-throws"><span class="toc-number">1.27.</span> <span class="toc-text">try&#x2F;catch 与 throws</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#catch："><span class="toc-number">1.28.</span> <span class="toc-text">catch：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Object类"><span class="toc-number">1.29.</span> <span class="toc-text">Object类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#equals"><span class="toc-number">1.30.</span> <span class="toc-text">equals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String类常用方法"><span class="toc-number">1.31.</span> <span class="toc-text">String类常用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组"><span class="toc-number">1.32.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#线程Thread"><span class="toc-number">1.33.</span> <span class="toc-text">线程Thread</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Event"><span class="toc-number">1.34.</span> <span class="toc-text">Event</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Override"><span class="toc-number">1.35.</span> <span class="toc-text">@Override</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#str-int-“”-将int转字符串"><span class="toc-number">1.36.</span> <span class="toc-text">str &#x3D; int + “”;将int转字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内部类与匿名类"><span class="toc-number">1.37.</span> <span class="toc-text">内部类与匿名类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成可执行jar文件："><span class="toc-number">1.38.</span> <span class="toc-text">生成可执行jar文件：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#流"><span class="toc-number">1.39.</span> <span class="toc-text">流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象序列化"><span class="toc-number">1.40.</span> <span class="toc-text">对象序列化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重写hashCode-与equals"><span class="toc-number">1.41.</span> <span class="toc-text">重写hashCode()与equals()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lterator接口"><span class="toc-number">1.42.</span> <span class="toc-text">lterator接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型"><span class="toc-number">1.43.</span> <span class="toc-text">泛型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络编程（Socket编程）"><span class="toc-number">1.44.</span> <span class="toc-text">网络编程（Socket编程）</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -640,7 +656,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AutoCAD</a>
+                <a href="javascript:void(0)" class="js-tag color2">Golang</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -652,7 +668,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Golang</a>
+                <a href="javascript:void(0)" class="js-tag color3">AutoCAD</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -680,11 +696,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HelloWorld</a>
+                <a href="javascript:void(0)" class="js-tag color3">开车</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">开车</a>
+                <a href="javascript:void(0)" class="js-tag color1">HelloWorld</a>
               </li>
              
               <li class="article-tag-list-item">
