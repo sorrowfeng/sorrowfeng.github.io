@@ -41,6 +41,7 @@
 
   
 
+  
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body>
@@ -87,21 +88,18 @@
 				
 					<a class="github" target="_blank" href="https://github.com/sorrowfeng" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="qq" target="_blank" href="/1399600304" title="qq"><i class="icon-qq"></i></a>
-		        
 					<a class="bilibili" target="_blank" href="https://space.bilibili.com/9970305" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
-					<a class="mail" target="_blank" href="https://1399600304@qq.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 			</div>
 		<!-- APlayer音乐播放器 -->
 			
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-			<!-- // 这里div的样式是笔者自己修改过的，你可以直接使用APlayer官方的原配置：<div id="aplayer"></div> -->
+			<!--// 这里div的样式是笔者自己修改过的，你可以直接使用APlayer官方的原配置：<div id="aplayer"></div> -->
 			<div id="aplayer" style="position:absolute;left;0;bottom:0;"></div>
 			<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
-			<script src="https://api.i-meto.com/music/player.js"></script>
 			<script>
 			    const ap = new APlayer({
 			        container: document.getElementById('aplayer'),
@@ -110,8 +108,8 @@
 			        listMaxHeight: 90,
 			        order: 'list',
 			        loop: 'all',
-			        theme: '#b7daff',
-			        preload: 'none',
+			        theme: '#e9e9e9',
+			        preload: 'auto',
 			        mutex: true,
 			        lrcType: 3,
 			        volume: 0.7,
@@ -211,11 +209,9 @@
 					
 						<a class="github" target="_blank" href="https://github.com/sorrowfeng" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="qq" target="_blank" href="/1399600304" title="qq"><i class="icon-qq"></i></a>
-			        
 						<a class="bilibili" target="_blank" href="https://space.bilibili.com/9970305" title="bilibili"><i class="icon-bilibili"></i></a>
 			        
-						<a class="mail" target="_blank" href="https://1399600304@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
 				</div>
 			</nav>
@@ -364,57 +360,6 @@
       
 
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://sorrowfeng.github.io/every-helloworld/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
       <div class="clearfix"></div>
     </div>
   </div>
@@ -529,18 +474,11 @@ gitalk.render('gitalk-container')
       	<div class="footer-right">
       		<a href="https://sorrowfeng.github.io" target="_blank">一色いろは</a> <a href="https://github.com/sorrowfeng" target="_blank">sorrowfeng</a>
       	</div>
-    </div>
-    <!--统计代码-->
-    <span id="busuanzi_container_site_uv">
-      本站访客数：<span id="busuanzi_value_site_uv"></span>人 |
-    </span>
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量：<span id="busuanzi_value_page_pv"></span>次
-    </span>
+    </div>    
   </div>
 </footer>
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -554,7 +492,7 @@ gitalk.render('gitalk-container')
 		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -716,7 +654,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">小小工程师一个&lt;br&gt;谢谢大家&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">小小工程师一个&lt;br&gt;谢谢大家&lt;br&gt;QQ：1399600304&lt;br&gt;github：sorrowfeng&lt;br&gt;邮箱：1399600304@qq.com</div>
   	  	
     	</section>
     
