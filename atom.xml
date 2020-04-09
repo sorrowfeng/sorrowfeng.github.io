@@ -18,8 +18,8 @@
   
   <entry>
     <title>go语言学习</title>
-    <link href="https://sorrowfeng.github.io/golang-note.html"/>
-    <id>https://sorrowfeng.github.io/golang-note.html</id>
+    <link href="https://sorrowfeng.github.io/golang-note/"/>
+    <id>https://sorrowfeng.github.io/golang-note/</id>
     <published>2020-04-09T12:59:19.000Z</published>
     <updated>2020-04-09T12:59:20.259Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>java学习笔记</title>
-    <link href="https://sorrowfeng.github.io/java-note.html"/>
-    <id>https://sorrowfeng.github.io/java-note.html</id>
+    <link href="https://sorrowfeng.github.io/java-note/"/>
+    <id>https://sorrowfeng.github.io/java-note/</id>
     <published>2020-04-06T08:51:51.000Z</published>
     <updated>2020-04-09T12:59:00.032Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>SQL server学习笔记</title>
-    <link href="https://sorrowfeng.github.io/sqlserver-note.html"/>
-    <id>https://sorrowfeng.github.io/sqlserver-note.html</id>
+    <link href="https://sorrowfeng.github.io/sqlserver-note/"/>
+    <id>https://sorrowfeng.github.io/sqlserver-note/</id>
     <published>2020-04-04T04:43:03.000Z</published>
     <updated>2020-04-08T15:06:52.552Z</updated>
     
@@ -87,8 +87,8 @@
   
   <entry>
     <title>计算机三级学习</title>
-    <link href="https://sorrowfeng.github.io/computer-three-note.html"/>
-    <id>https://sorrowfeng.github.io/computer-three-note.html</id>
+    <link href="https://sorrowfeng.github.io/computer-three-note/"/>
+    <id>https://sorrowfeng.github.io/computer-three-note/</id>
     <published>2020-04-03T02:20:39.000Z</published>
     <updated>2020-04-08T15:08:32.741Z</updated>
     
@@ -110,8 +110,8 @@
   
   <entry>
     <title>亚索技巧</title>
-    <link href="https://sorrowfeng.github.io/game-yasuo-tips.html"/>
-    <id>https://sorrowfeng.github.io/game-yasuo-tips.html</id>
+    <link href="https://sorrowfeng.github.io/game-yasuo-tips/"/>
+    <id>https://sorrowfeng.github.io/game-yasuo-tips/</id>
     <published>2020-04-03T02:17:06.000Z</published>
     <updated>2020-04-08T15:07:27.422Z</updated>
     
@@ -133,8 +133,8 @@
   
   <entry>
     <title>stm32cubemx学习</title>
-    <link href="https://sorrowfeng.github.io/stm32cubemx-note.html"/>
-    <id>https://sorrowfeng.github.io/stm32cubemx-note.html</id>
+    <link href="https://sorrowfeng.github.io/stm32cubemx-note/"/>
+    <id>https://sorrowfeng.github.io/stm32cubemx-note/</id>
     <published>2020-04-03T02:16:29.000Z</published>
     <updated>2020-04-08T15:07:05.087Z</updated>
     
@@ -156,8 +156,8 @@
   
   <entry>
     <title>Linux学习</title>
-    <link href="https://sorrowfeng.github.io/linux-note.html"/>
-    <id>https://sorrowfeng.github.io/linux-note.html</id>
+    <link href="https://sorrowfeng.github.io/linux-note/"/>
+    <id>https://sorrowfeng.github.io/linux-note/</id>
     <published>2020-04-03T02:15:54.000Z</published>
     <updated>2020-04-08T15:06:42.136Z</updated>
     
@@ -179,8 +179,8 @@
   
   <entry>
     <title>C++学习</title>
-    <link href="https://sorrowfeng.github.io/c++note.html"/>
-    <id>https://sorrowfeng.github.io/c++note.html</id>
+    <link href="https://sorrowfeng.github.io/c++note/"/>
+    <id>https://sorrowfeng.github.io/c++note/</id>
     <published>2020-04-03T02:14:52.000Z</published>
     <updated>2020-04-08T15:06:18.381Z</updated>
     
@@ -194,16 +194,16 @@
     
     
     
-      <category term="C++" scheme="https://sorrowfeng.github.io/tags/C/"/>
-    
       <category term="学习笔记" scheme="https://sorrowfeng.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="C++" scheme="https://sorrowfeng.github.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>AutoCAD学习</title>
-    <link href="https://sorrowfeng.github.io/auto-note.html"/>
-    <id>https://sorrowfeng.github.io/auto-note.html</id>
+    <link href="https://sorrowfeng.github.io/auto-note/"/>
+    <id>https://sorrowfeng.github.io/auto-note/</id>
     <published>2020-04-03T02:14:19.000Z</published>
     <updated>2020-04-08T15:06:02.541Z</updated>
     
@@ -217,16 +217,16 @@
     
     
     
-      <category term="学习笔记" scheme="https://sorrowfeng.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="AutoCAD" scheme="https://sorrowfeng.github.io/tags/AutoCAD/"/>
+    
+      <category term="学习笔记" scheme="https://sorrowfeng.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>各版本HelloWorld</title>
-    <link href="https://sorrowfeng.github.io/every-helloworld.html"/>
-    <id>https://sorrowfeng.github.io/every-helloworld.html</id>
+    <link href="https://sorrowfeng.github.io/every-helloworld/"/>
+    <id>https://sorrowfeng.github.io/every-helloworld/</id>
     <published>2020-04-02T02:14:52.000Z</published>
     <updated>2020-04-08T15:07:37.404Z</updated>
     
@@ -248,8 +248,8 @@
   
   <entry>
     <title>开 车 指 南</title>
-    <link href="https://sorrowfeng.github.io/ghs-didi.html"/>
-    <id>https://sorrowfeng.github.io/ghs-didi.html</id>
+    <link href="https://sorrowfeng.github.io/ghs-didi/"/>
+    <id>https://sorrowfeng.github.io/ghs-didi/</id>
     <published>2020-04-01T02:00:57.000Z</published>
     <updated>2020-04-08T15:08:12.894Z</updated>
     
