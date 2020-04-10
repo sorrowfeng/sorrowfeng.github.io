@@ -31,13 +31,13 @@
   <meta name="description" content="AutoCAD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AutoCAD学习">
-<meta property="og:url" content="https://sorrowfeng.github.io/auto-note/index.html">
+<meta property="og:url" content="https://sorrowfeng.github.io/autocad-note/index.html">
 <meta property="og:site_name" content="木风可可">
 <meta property="og:description" content="AutoCAD">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sorrowfeng.github.io/img/picture7.jpg">
 <meta property="article:published_time" content="2020-04-03T02:14:19.000Z">
-<meta property="article:modified_time" content="2020-04-08T15:06:02.541Z">
+<meta property="article:modified_time" content="2020-04-10T02:40:26.884Z">
 <meta property="article:author" content="一色いろは">
 <meta property="article:tag" content="AutoCAD">
 <meta property="article:tag" content="学习笔记">
@@ -94,6 +94,10 @@ var _hmt = _hmt || [];
 		<hgroup>
 		  <h1 class="header-author"><a href="/">一色いろは</a></h1>
 		</hgroup>
+		
+			<!-- <p class="header-subtitle">木风可可的博客</p> -->
+			<!-- <p id="hitokoto">:D 获取中...</p> -->
+			<script src="https://v1.hitokoto.cn/?encode=jsselect=%23hitokoto" defer></script>
 		
 
 		<nav class="header-menu">
@@ -231,6 +235,8 @@ var _hmt = _hmt || [];
 			  <h1 class="header-author js-header-author">一色いろは</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>木风可可的博客<i class="icon icon-quo-right"></i></p>
+			
 			
 			
 				
@@ -284,7 +290,7 @@ var _hmt = _hmt || [];
   
 
         
-        <a href="/auto-note/" class="archive-article-date">
+        <a href="/autocad-note/" class="archive-article-date">
   	<time datetime="2020-04-03T02:14:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
 </a>
         <!-- 需要添加的位置 -->
@@ -352,7 +358,7 @@ var _hmt = _hmt || [];
 
 <h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">DDUNITS	调整单位</span><br><span class="line">ZOOM	放大</span><br><span class="line">PAN	平移</span><br><span class="line">NEW	新建文件</span><br><span class="line">OPEN	打开文件</span><br><span class="line">SAVE	保存</span><br><span class="line">LINE	画直线	按U放弃，C闭合，按ESC取消，@加坐标，@表示相对位置</span><br><span class="line">ARC	画圆弧</span><br><span class="line">PLINE	多段线</span><br><span class="line">UNDO	撤销</span><br><span class="line">MOVE	位移</span><br><span class="line">ERASE	橡皮擦，可以用来删除（e）</span><br><span class="line">COPY	拷贝</span><br><span class="line">CIRCLR	画圆</span><br><span class="line">MIRROR	镜像复制</span><br><span class="line">DONUT	圆环</span><br><span class="line">FILL	填充，关闭后就是线条填充</span><br><span class="line">ELLIPSE	椭圆</span><br><span class="line">TRIM	修剪</span><br><span class="line">POLYGON 多边形</span><br><span class="line">RECTANG 矩形</span><br><span class="line">POINT 点</span><br><span class="line">OFFSET 偏移</span><br><span class="line">ARRAY 阵列</span><br><span class="line">ROTATE 旋转</span><br><span class="line">SCALE 缩放</span><br><span class="line">EXTEND 延伸</span><br><span class="line">EXPLODE 分解，将图形分解成一段段的</span><br><span class="line">FILLTE 圆角</span><br><span class="line">STRETCH 拉伸</span><br><span class="line">LENGTHEN 拉伸线段</span><br><span class="line">CHAMFER 倒角</span><br><span class="line">BREAK 打断，可以打断线段</span><br><span class="line">JOIN 合并，可以将对象合并起来</span><br><span class="line">TEXT 文字，单行文字每一行是分开的，多行文字是一个整体</span><br><span class="line">TABLE 表格</span><br><span class="line">QDIM 快速标注  ，输入%%c就是直径的符号</span><br><span class="line">DIMSTYLE（D） 标注样式      ，标注可以用一个图层来管理</span><br><span class="line">按B  块定义</span><br><span class="line">按W 写块</span><br><span class="line">按I（INSERT） 插入块</span><br></pre></td></tr></table></figure>
 
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">对象约束    在参数化选项里面</span><br><span class="line">块的创建    按B  块定义   按W 写块    按I（INSERT） 插入块 </span><br><span class="line">查询距离    工具-查询</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">三维建模</span><br><span class="line">拉伸可以将二维平面拉伸为三维</span><br><span class="line">可视化-可以调视图方向</span><br><span class="line">合并成一个对象UNION，联合</span><br><span class="line">实体差集SUBTRACT，选择保留的对象按Enter，再选择要减去的对象，在联合下方</span><br><span class="line"></span><br><span class="line">布尔运算：即并集，交集，差集</span><br><span class="line"></span><br><span class="line">左上角可以快速切换视角</span><br><span class="line"></span><br><span class="line">扫掠的使用，在二维平画路径与要扫掠的图形，先选图形在选路径，就能将图形扫掠到路径上去</span><br><span class="line"></span><br><span class="line">截图平面：可以截出一个横截面</span><br><span class="line"></span><br><span class="line">三维阵列：修改-三维操作-三维阵列</span><br><span class="line"></span><br><span class="line">三维镜像：修改-三维操作-三维镜像</span><br><span class="line"></span><br><span class="line">三维对齐：修改-三维操作-三维对齐</span><br><span class="line"></span><br><span class="line">灯光：可视化-创建光源</span><br><span class="line"></span><br><span class="line">材质：可视化-材质浏览器，直接把材质拖到物体上就可以</span><br><span class="line"></span><br><span class="line">渲染：可视化-渲染到尺寸</span><br></pre></td></tr></table></figure>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">对象约束    在参数化选项里面</span><br><span class="line">块的创建    按B  块定义   按W 写块    按I（INSERT） 插入块 </span><br><span class="line">查询距离    工具-查询</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">三维建模</span><br><span class="line">拉伸可以将二维平面拉伸为三维</span><br><span class="line">可视化-可以调视图方向</span><br><span class="line">合并成一个对象UNION，联合</span><br><span class="line">实体差集SUBTRACT，选择保留的对象按Enter，再选择要减去的对象，在联合下方</span><br><span class="line"></span><br><span class="line">布尔运算:即并集，交集，差集</span><br><span class="line"></span><br><span class="line">左上角可以快速切换视角</span><br><span class="line"></span><br><span class="line">扫掠的使用，在二维平画路径与要扫掠的图形，先选图形在选路径，就能将图形扫掠到路径上去</span><br><span class="line"></span><br><span class="line">截图平面:可以截出一个横截面</span><br><span class="line"></span><br><span class="line">三维阵列:修改-三维操作-三维阵列</span><br><span class="line"></span><br><span class="line">三维镜像:修改-三维操作-三维镜像</span><br><span class="line"></span><br><span class="line">三维对齐:修改-三维操作-三维对齐</span><br><span class="line"></span><br><span class="line">灯光:可视化-创建光源</span><br><span class="line"></span><br><span class="line">材质:可视化-材质浏览器，直接把材质拖到物体上就可以</span><br><span class="line"></span><br><span class="line">渲染:可视化-渲染到尺寸</span><br></pre></td></tr></table></figure>
       
 
       
@@ -618,7 +624,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color5">SQLserver</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -626,7 +632,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SQLserver</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
