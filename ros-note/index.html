@@ -37,7 +37,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yanxuan.nosdn.127.net/576bd3ecf4ccd416258840e84ed61122.jpg">
 <meta property="article:published_time" content="2020-04-29T09:52:00.000Z">
-<meta property="article:modified_time" content="2020-04-29T10:00:16.331Z">
+<meta property="article:modified_time" content="2020-04-29T10:03:46.381Z">
 <meta property="article:author" content="一色いろは">
 <meta property="article:tag" content="学习笔记">
 <meta property="article:tag" content="ROS">
@@ -250,8 +250,7 @@ var _hmt = _hmt || [];
         <h2 id="ROS"><a href="#ROS" class="headerlink" title="ROS"></a>ROS</h2><p><img src="http://yanxuan.nosdn.127.net/576bd3ecf4ccd416258840e84ed61122.jpg" alt="picture11.jpg"></p>
 <a id="more"></a>
 
-<h3 id="手动建工程"><a href="#手动建工程" class="headerlink" title="手动建工程"></a>手动建工程</h3><p>来到总工作目录下, 如~/catkin_ws </p>
-<h4 id="新建工作目录"><a href="#新建工作目录" class="headerlink" title="新建工作目录"></a>新建工作目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p robot_test/src</span><br><span class="line"><span class="built_in">cd</span> src </span><br><span class="line">catkin_init_workspace 初始化工作空间</span><br><span class="line"><span class="built_in">cd</span> .. 回到robot_test</span><br><span class="line">catkin_make 编译工程</span><br></pre></td></tr></table></figure>
+<h3 id="手动建工程"><a href="#手动建工程" class="headerlink" title="手动建工程"></a>手动建工程</h3><pre><code>来到总工作目录下, 如~/catkin_ws </code></pre><h4 id="新建工作目录"><a href="#新建工作目录" class="headerlink" title="新建工作目录"></a>新建工作目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p robot_test/src</span><br><span class="line"><span class="built_in">cd</span> src </span><br><span class="line">catkin_init_workspace 初始化工作空间</span><br><span class="line"><span class="built_in">cd</span> .. 回到robot_test</span><br><span class="line">catkin_make 编译工程</span><br></pre></td></tr></table></figure>
 <h4 id="添加工作路径path"><a href="#添加工作路径path" class="headerlink" title="添加工作路径path"></a>添加工作路径path</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line">在最下面加入工作路径</span><br><span class="line"><span class="built_in">source</span> ~/catkin_ws/robot_test/devel/setup.bash</span><br></pre></td></tr></table></figure>
 
 <h4 id="编写模块-或下载模块"><a href="#编写模块-或下载模块" class="headerlink" title="编写模块,或下载模块"></a>编写模块,或下载模块</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">下载模块</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/robopeak/rplidar_ros 如rplidar_ros模块</span><br><span class="line">并移至robot/src路径下</span><br></pre></td></tr></table></figure>
@@ -482,11 +481,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">Golang</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Golang</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -502,19 +501,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">stm32</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">HelloWorld</a>
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">亚索</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">HelloWorld</a>
               </li>
              
               <li class="article-tag-list-item">
