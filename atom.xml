@@ -10,7 +10,7 @@
   <id>https://sorrowfeng.github.io/</id>
   
   <author>
-    <name>一色いろは</name>
+    <name>秋山澪</name>
     
   </author>
   
@@ -106,9 +106,9 @@
     
     
     
-      <category term="学习笔记" scheme="https://sorrowfeng.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="Golang" scheme="https://sorrowfeng.github.io/tags/Golang/"/>
+    
+      <category term="学习笔记" scheme="https://sorrowfeng.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -281,9 +281,9 @@
     
     
     
-      <category term="C++" scheme="https://sorrowfeng.github.io/tags/C/"/>
-    
       <category term="学习笔记" scheme="https://sorrowfeng.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="C++" scheme="https://sorrowfeng.github.io/tags/C/"/>
     
   </entry>
   
