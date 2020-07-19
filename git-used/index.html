@@ -7,7 +7,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://sorrowfeng.github.io">
-  <title>Tag: Altium Designer | 木风可可</title>
+  <title>GIT使用笔记 | 木风可可</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- 添加进度条开始 -->
@@ -28,15 +28,21 @@
   </style>
   <!-- 添加进度条结束 -->
 
-  <meta name="description" content="木风可可的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="木风可可">
-<meta property="og:url" content="https://sorrowfeng.github.io/tags/Altium-Designer/index.html">
+  <meta name="description" content="GIT使用笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GIT使用笔记">
+<meta property="og:url" content="https://sorrowfeng.github.io/git-used/index.html">
 <meta property="og:site_name" content="木风可可">
-<meta property="og:description" content="木风可可的博客">
+<meta property="og:description" content="GIT使用笔记">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/19/UWJuZR.jpg">
+<meta property="article:published_time" content="2020-07-19T10:29:59.000Z">
+<meta property="article:modified_time" content="2020-07-19T10:39:13.192Z">
 <meta property="article:author" content="秋山澪">
+<meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/07/19/UWJuZR.jpg">
   
     <link rel="alternative" href="/atom.xml" title="木风可可" type="application/atom+xml">
   
@@ -190,64 +196,178 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-GIT使用笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ad-note/" class="archive-article-date">
-  	<time datetime="2020-04-30T01:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ad-note/">Altium Designer学习</a>
+    <h1 class="article-title" itemprop="name">
+      GIT使用笔记
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/git-used/" class="archive-article-date">
+  	<time datetime="2020-07-19T10:29:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
+</a>
+        
+        
+      </header>
+    
+    
+     <!-- 目录内容 -->
+    
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+        <div id="toc-article" class="toc-article">
+            <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+            <strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#github新建ssh-key"><span class="toc-number">1.</span> <span class="toc-text">github新建ssh-key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传到github"><span class="toc-number">2.</span> <span class="toc-text">上传到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将github上的项目同步到本地"><span class="toc-number">3.</span> <span class="toc-text">将github上的项目同步到本地</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将Github上传的想要删除的文件删除"><span class="toc-number">4.</span> <span class="toc-text">将Github上传的想要删除的文件删除</span></a></li></ol>
+             </div>
+       <script type="text/javascript">
+        function showToc(){
+            var toc_article = document.getElementById("toc-article");
+            var show_toc_btn = document.getElementById("show-toc-btn");
+            toc_article.setAttribute("style","display:block");
+            show_toc_btn.setAttribute("style","display:none");
+            };
+        function showBtn(){
+            var toc_article = document.getElementById("toc-article");
+            var show_toc_btn = document.getElementById("show-toc-btn");
+            toc_article.setAttribute("style","display:none");
+            show_toc_btn.setAttribute("style","display:block");
+            };
+       </script>
           
+    <!-- 目录内容结束 -->
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>GIT使用笔记</strong><br><img src="https://s1.ax1x.com/2020/07/19/UWJuZR.jpg" alt="UWJuZR.jpg"></p>
+<a id="more"></a>
+
+<h2 id="github新建ssh-key"><a href="#github新建ssh-key" class="headerlink" title="github新建ssh-key"></a>github新建ssh-key</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"sorrowfeng"</span></span><br><span class="line"></span><br><span class="line">git config --global user.email <span class="string">"1399600304@qq.com"</span></span><br><span class="line"></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"1399600304@qq.com"</span></span><br><span class="line"></span><br><span class="line">添加SSH-KEY</span><br><span class="line">文件在/user/.ssh</span><br></pre></td></tr></table></figure>
+
+<h2 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .        添加文件， 点  .  表示添加所有文件</span><br><span class="line">git status     查看添加的状态</span><br><span class="line">git commit  -m  <span class="string">"提交信息"</span>  </span><br><span class="line">git remote add origin git@github.com:xxxxx.git    添加远程地址</span><br><span class="line">git push -u origin master   推送，仓库是空的则加-u，否则不加</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<h2 id="将github上的项目同步到本地"><a href="#将github上的项目同步到本地" class="headerlink" title="将github上的项目同步到本地"></a>将github上的项目同步到本地</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">首先需要在本地创建一个文件夹，作为项目的存放仓库，之后进入该文件夹下。</span><br><span class="line"></span><br><span class="line">初始化该目录为Git仓库</span><br><span class="line">git init</span><br><span class="line"></span><br><span class="line">将仓库连接到Github上的该项目</span><br><span class="line">git remote add origin 你的仓库的网址</span><br><span class="line">如过手滑信息填写错误，使用清除指令 $ git remote remove origin 清除源</span><br><span class="line"></span><br><span class="line">使用Pull指令，从远程源的主分支更新代码到服务器（本地）</span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line">(如果没有新建文件，而是用一个原来有文件的文件夹，则需要使用下面的命令将文件夹下的内容删除)</span><br><span class="line">git clean -d -fx</span><br></pre></td></tr></table></figure>
+
+<h2 id="将Github上传的想要删除的文件删除"><a href="#将Github上传的想要删除的文件删除" class="headerlink" title="将Github上传的想要删除的文件删除"></a>将Github上传的想要删除的文件删除</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">第一步</span><br><span class="line">git pull origin master</span><br><span class="line">在你终端误上传的文件夹的位置输入指令，将远程仓库里面的项目拉下来</span><br><span class="line"></span><br><span class="line">第二步</span><br><span class="line">git rm -r --cached + 文件名</span><br><span class="line">删除你想要删除的文件</span><br><span class="line"></span><br><span class="line">第三步</span><br><span class="line">git commit -m <span class="string">"删除.."</span></span><br><span class="line"></span><br><span class="line">第四步</span><br><span class="line">git push</span><br><span class="line">这一步很重要，将你从库中拉下来的文件上传回去</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>请支持一包辣条吧<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://yanxuan.nosdn.127.net/05d2ee6a16f637910d76d76eb1c3eca1.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://yanxuan.nosdn.127.net/300a62f2490c6f17d511841dcae1f924.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Altium Designer</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/Qt-note/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Qt学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+ 
+
+  
+
+
+
 
 
           </div>
@@ -272,9 +392,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: false,
