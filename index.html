@@ -219,78 +219,8 @@ var _hmt = _hmt || [];
 
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-
-
-<h2 id="需要工具"><a href="#需要工具" class="headerlink" title="需要工具"></a>需要工具</h2><ul>
-<li>Qt</li>
-</ul>
-<p><em>安装框选模块, Qt开头的都选了</em><br><a href="https://imgchr.com/i/atilLT" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/08/02/atilLT.jpg" alt="atilLT.jpg"></a><br><a href="https://imgchr.com/i/atiQyV" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/08/02/atiQyV.jpg" alt="atiQyV.jpg"></a></p>
-<ul>
-<li><p>cmake</p>
-</li>
-<li><p>opencv</p>
-</li>
-</ul>
-<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><ul>
-<li><p>加入cmake的环境变量</p>
-</li>
-<li><p>加入qt中mingw的环境变量</p>
-</li>
-</ul>
-<p>如 E:\install_software\Qt\Qt5.12.2\Tools\mingw730_32\bin<br><img src="https://s1.ax1x.com/2020/08/02/atCk1P.png" alt="atCk1P.png"></p>
-<h2 id="解压opencv"><a href="#解压opencv" class="headerlink" title="解压opencv"></a>解压opencv</h2><ul>
-<li><p>解压到如 E:\install_software\opencv</p>
-</li>
-<li><p>在opencv中新建文件夹存放编译输出opencv-build<br>如E:\install_software\Qt\opencv\opencv-build</p>
-</li>
-</ul>
-<h2 id="开始cmake"><a href="#开始cmake" class="headerlink" title="开始cmake"></a>开始cmake</h2><ul>
-<li><p>选择源目录为opencv/sources</p>
-</li>
-<li><p>输出目录为opencv/opencv-build<br><img src="https://s1.ax1x.com/2020/08/02/atpnKS.png" alt="atpnKS.png"></p>
-</li>
-<li><p>点击configure</p>
-</li>
-<li><p>选择MinGW Makefile, 下面选择第二个 本地</p>
-</li>
-<li><p>选择qt中的gcc与g++路径<br>如E:\install_software\Qt\Qt5.12.2\Tools\mingw730_32\bin\gcc.exe(和g++.exe)</p>
-</li>
-</ul>
-<p><img src="https://s1.ax1x.com/2020/08/02/atpYvT.png" alt="atpYvT.png"><br><img src="https://s1.ax1x.com/2020/08/02/atpB5R.png" alt="atpB5R.png"></p>
-<h2 id="下一步cmake"><a href="#下一步cmake" class="headerlink" title="下一步cmake"></a>下一步cmake</h2><ul>
-<li>勾选上<br>WITH_QT 和<br>WITH_OPENGL</li>
-<li>再选择QT5的正确目录<br><img src="https://s1.ax1x.com/2020/08/02/at9YFA.png" alt="at9YFA.png"><br><img src="https://s1.ax1x.com/2020/08/02/at9Vo9.png" alt="at9Vo9.png"></li>
-</ul>
-<p>再次点击configure</p>
-<h2 id="下一步cmake-1"><a href="#下一步cmake-1" class="headerlink" title="下一步cmake"></a>下一步cmake</h2><ul>
-<li>确认Qt5Core, Qt5Gui等目录是否正确<br><img src="https://s1.ax1x.com/2020/08/02/atpiEd.png" alt="atpiEd.png"></li>
-<li>取消勾选 OPENCV_ENABLE_ALLOCATOR_STATS<br><img src="https://s1.ax1x.com/2020/08/02/atCxg0.png" alt="atCxg0.png"></li>
-</ul>
-<h2 id="查看cpu核心数与线程数"><a href="#查看cpu核心数与线程数" class="headerlink" title="查看cpu核心数与线程数"></a>查看cpu核心数与线程数</h2><ul>
-<li>wmic</li>
-<li>cpu get *<br><img src="https://s1.ax1x.com/2020/08/02/at9soj.png" alt="at9soj.png"></li>
-<li>划到大概一半的位置能看到核心数与线程数<br><img src="https://s1.ax1x.com/2020/08/02/atC3cV.png" alt="atC3cV.png"></li>
-</ul>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><ul>
-<li><p>mingw32-make -j [+线程数]<br><img src="https://s1.ax1x.com/2020/08/02/atCrjK.png" alt="atCrjK.png"></p>
-</li>
-<li><p>mingw32-make install<br>上一步完成后输入</p>
-</li>
-</ul>
-<h2 id="将编译完成后的bin目录加入环境变量"><a href="#将编译完成后的bin目录加入环境变量" class="headerlink" title="将编译完成后的bin目录加入环境变量"></a>将编译完成后的bin目录加入环境变量</h2><p><img src="https://s1.ax1x.com/2020/08/02/atP15d.png" alt="atP15d.png"></p>
-<h2 id="环境配置完成"><a href="#环境配置完成" class="headerlink" title="环境配置完成"></a>环境配置完成</h2><ul>
-<li><p>新建qt工程, 修改pro文件, 加入一段配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># opencv</span></span><br><span class="line">INCLUDEPATH += E:\install_software\opencv\build\include</span><br><span class="line"></span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_core440.dll</span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_highgui440.dll</span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_imgcodecs440.dll</span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_imgproc440.dll</span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_features2d440.dll</span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_calib3d440.dll</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>目录改为自己的安装路径, 以及将dll文件改为自己安装的opencv对应的版本, 以第一个为例</p>
-</li>
-<li><p>我装的是4.4.0版本, 所以路径后面为440<br>E:\install_software\opencv\opencv_build\bin\libopencv_core440.dll</p>
-</li>
-<li><p>添加头文件即可</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;opencv2/core/core.hpp&gt;</span></span><br><span class="line"><span class="comment">#include &lt;opencv2/highgui/highgui.hpp&gt;</span></span><br><span class="line"><span class="comment">#include &lt;opencv2/opencv.hpp&gt;</span></span><br><span class="line"></span><br><span class="line">using namespace cv;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+        <p><strong>Qt配置opencv环境</strong><br><img src="https://s1.ax1x.com/2020/08/02/ate2E6.png" alt="ate2E6.png"></p>
+        
       
 
       
@@ -1232,7 +1162,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Golang</a>
+                <a href="javascript:void(0)" class="js-tag color3">AutoCAD</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1244,7 +1174,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SQLserver</a>
+                <a href="javascript:void(0)" class="js-tag color2">Golang</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1260,7 +1190,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AutoCAD</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SQLserver</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1268,27 +1202,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Altium Designer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">亚索</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">简历</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1304,6 +1218,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ROS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">亚索</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">stm32</a>
               </li>
              
@@ -1312,11 +1242,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ROS</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机三级</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机三级</a>
+                <a href="javascript:void(0)" class="js-tag color3">简历</a>
               </li>
             
             <div class="clearfix"></div>
