@@ -7,7 +7,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://sorrowfeng.github.io">
-  <title>归档: 2020 | 木风可可</title>
+  <title>Qt配置opencv环境 | 木风可可</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- 添加进度条开始 -->
@@ -28,15 +28,35 @@
   </style>
   <!-- 添加进度条结束 -->
 
-  <meta name="description" content="木风可可的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="木风可可">
-<meta property="og:url" content="https://sorrowfeng.github.io/archives/2020/index.html">
+  <meta name="description" content="需要工具 Qt  安装框选模块, Qt开头的都选了  cmake  opencv   配置环境变量 加入cmake的环境变量  加入qt中mingw的环境变量   如 E:\install_software\Qt\Qt5.12.2\Tools\mingw730_32\bin 解压opencv 解压到如 E:\install_software\opencv  在opencv中新建文件夹存放编译">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Qt配置opencv环境">
+<meta property="og:url" content="https://sorrowfeng.github.io/qt-with-opencv/index.html">
 <meta property="og:site_name" content="木风可可">
-<meta property="og:description" content="木风可可的博客">
+<meta property="og:description" content="需要工具 Qt  安装框选模块, Qt开头的都选了  cmake  opencv   配置环境变量 加入cmake的环境变量  加入qt中mingw的环境变量   如 E:\install_software\Qt\Qt5.12.2\Tools\mingw730_32\bin 解压opencv 解压到如 E:\install_software\opencv  在opencv中新建文件夹存放编译">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atilLT.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atiQyV.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atCk1P.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atpnKS.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atpYvT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atpB5R.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/at9YFA.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/at9Vo9.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atpiEd.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atCxg0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/at9soj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atC3cV.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atCrjK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/02/atP15d.png">
+<meta property="article:published_time" content="2020-08-02T10:22:51.000Z">
+<meta property="article:modified_time" content="2020-08-02T11:32:24.790Z">
 <meta property="article:author" content="秋山澪">
+<meta property="article:tag" content="环境配置">
+<meta property="article:tag" content="Qt">
+<meta property="article:tag" content="opencv">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/08/02/atilLT.jpg">
   
     <link rel="alternative" href="/atom.xml" title="木风可可" type="application/atom+xml">
   
@@ -190,36 +210,167 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Qt配置opencv环境" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/qt-with-opencv/" class="archive-article-date">
-  	<time datetime="2020-08-02T10:22:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/qt-with-opencv/">Qt配置opencv环境</a>
+    <h1 class="article-title" itemprop="name">
+      Qt配置opencv环境
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/qt-with-opencv/" class="archive-article-date">
+  	<time datetime="2020-08-02T10:22:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
+</a>
+        
+        
+      </header>
+    
+    
+     <!-- 目录内容 -->
+    
+        <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+              <span class="btn-bg"></span>
+              <span class="btn-text">文章导航</span>
+              </p>
+        <div id="toc-article" class="toc-article">
+            <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+            <strong class="toc-title">文章目录</strong>
+               <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#需要工具"><span class="toc-number">1.</span> <span class="toc-text">需要工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置环境变量"><span class="toc-number">2.</span> <span class="toc-text">配置环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解压opencv"><span class="toc-number">3.</span> <span class="toc-text">解压opencv</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开始cmake"><span class="toc-number">4.</span> <span class="toc-text">开始cmake</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下一步cmake"><span class="toc-number">5.</span> <span class="toc-text">下一步cmake</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下一步cmake-1"><span class="toc-number">6.</span> <span class="toc-text">下一步cmake</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看cpu核心数与线程数"><span class="toc-number">7.</span> <span class="toc-text">查看cpu核心数与线程数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译"><span class="toc-number">8.</span> <span class="toc-text">编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将编译完成后的bin目录加入环境变量"><span class="toc-number">9.</span> <span class="toc-text">将编译完成后的bin目录加入环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境配置完成"><span class="toc-number">10.</span> <span class="toc-text">环境配置完成</span></a></li></ol>
+             </div>
+       <script type="text/javascript">
+        function showToc(){
+            var toc_article = document.getElementById("toc-article");
+            var show_toc_btn = document.getElementById("show-toc-btn");
+            toc_article.setAttribute("style","display:block");
+            show_toc_btn.setAttribute("style","display:none");
+            };
+        function showBtn(){
+            var toc_article = document.getElementById("toc-article");
+            var show_toc_btn = document.getElementById("show-toc-btn");
+            toc_article.setAttribute("style","display:none");
+            show_toc_btn.setAttribute("style","display:block");
+            };
+       </script>
           
+    <!-- 目录内容结束 -->
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+
+
+<h2 id="需要工具"><a href="#需要工具" class="headerlink" title="需要工具"></a>需要工具</h2><ul>
+<li>Qt</li>
+</ul>
+<p><em>安装框选模块, Qt开头的都选了</em><br><a href="https://imgchr.com/i/atilLT" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/08/02/atilLT.jpg" alt="atilLT.jpg"></a><br><a href="https://imgchr.com/i/atiQyV" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/08/02/atiQyV.jpg" alt="atiQyV.jpg"></a></p>
+<ul>
+<li><p>cmake</p>
+</li>
+<li><p>opencv</p>
+</li>
+</ul>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><ul>
+<li><p>加入cmake的环境变量</p>
+</li>
+<li><p>加入qt中mingw的环境变量</p>
+</li>
+</ul>
+<p>如 E:\install_software\Qt\Qt5.12.2\Tools\mingw730_32\bin<br><img src="https://s1.ax1x.com/2020/08/02/atCk1P.png" alt="atCk1P.png"></p>
+<h2 id="解压opencv"><a href="#解压opencv" class="headerlink" title="解压opencv"></a>解压opencv</h2><ul>
+<li><p>解压到如 E:\install_software\opencv</p>
+</li>
+<li><p>在opencv中新建文件夹存放编译输出opencv-build<br>如E:\install_software\Qt\opencv\opencv-build</p>
+</li>
+</ul>
+<h2 id="开始cmake"><a href="#开始cmake" class="headerlink" title="开始cmake"></a>开始cmake</h2><ul>
+<li><p>选择源目录为opencv/sources</p>
+</li>
+<li><p>输出目录为opencv/opencv-build<br><img src="https://s1.ax1x.com/2020/08/02/atpnKS.png" alt="atpnKS.png"></p>
+</li>
+<li><p>点击configure</p>
+</li>
+<li><p>选择MinGW Makefile, 下面选择第二个 本地</p>
+</li>
+<li><p>选择qt中的gcc与g++路径<br>如E:\install_software\Qt\Qt5.12.2\Tools\mingw730_32\bin\gcc.exe(和g++.exe)</p>
+</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/08/02/atpYvT.png" alt="atpYvT.png"><br><img src="https://s1.ax1x.com/2020/08/02/atpB5R.png" alt="atpB5R.png"></p>
+<h2 id="下一步cmake"><a href="#下一步cmake" class="headerlink" title="下一步cmake"></a>下一步cmake</h2><ul>
+<li>勾选上<br>WITH_QT 和<br>WITH_OPENGL</li>
+<li>再选择QT5的正确目录<br><img src="https://s1.ax1x.com/2020/08/02/at9YFA.png" alt="at9YFA.png"><br><img src="https://s1.ax1x.com/2020/08/02/at9Vo9.png" alt="at9Vo9.png"></li>
+</ul>
+<p>再次点击configure</p>
+<h2 id="下一步cmake-1"><a href="#下一步cmake-1" class="headerlink" title="下一步cmake"></a>下一步cmake</h2><ul>
+<li>确认Qt5Core, Qt5Gui等目录是否正确<br><img src="https://s1.ax1x.com/2020/08/02/atpiEd.png" alt="atpiEd.png"></li>
+<li>取消勾选 OPENCV_ENABLE_ALLOCATOR_STATS<br><img src="https://s1.ax1x.com/2020/08/02/atCxg0.png" alt="atCxg0.png"></li>
+</ul>
+<h2 id="查看cpu核心数与线程数"><a href="#查看cpu核心数与线程数" class="headerlink" title="查看cpu核心数与线程数"></a>查看cpu核心数与线程数</h2><ul>
+<li>wmic</li>
+<li>cpu get *<br><img src="https://s1.ax1x.com/2020/08/02/at9soj.png" alt="at9soj.png"></li>
+<li>划到大概一半的位置能看到核心数与线程数<br><img src="https://s1.ax1x.com/2020/08/02/atC3cV.png" alt="atC3cV.png"></li>
+</ul>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><ul>
+<li><p>mingw32-make -j [+线程数]<br><img src="https://s1.ax1x.com/2020/08/02/atCrjK.png" alt="atCrjK.png"></p>
+</li>
+<li><p>mingw32-make install<br>上一步完成后输入</p>
+</li>
+</ul>
+<h2 id="将编译完成后的bin目录加入环境变量"><a href="#将编译完成后的bin目录加入环境变量" class="headerlink" title="将编译完成后的bin目录加入环境变量"></a>将编译完成后的bin目录加入环境变量</h2><p><img src="https://s1.ax1x.com/2020/08/02/atP15d.png" alt="atP15d.png"></p>
+<h2 id="环境配置完成"><a href="#环境配置完成" class="headerlink" title="环境配置完成"></a>环境配置完成</h2><ul>
+<li><p>新建qt工程, 修改pro文件, 加入一段配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># opencv</span></span><br><span class="line">INCLUDEPATH += E:\install_software\opencv\build\include</span><br><span class="line"></span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_core440.dll</span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_highgui440.dll</span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_imgcodecs440.dll</span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_imgproc440.dll</span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_features2d440.dll</span><br><span class="line">LIBS += E:\install_software\opencv\opencv_build\bin\libopencv_calib3d440.dll</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>目录改为自己的安装路径, 以及将dll文件改为自己安装的opencv对应的版本, 以第一个为例</p>
+</li>
+<li><p>我装的是4.4.0版本, 所以路径后面为440<br>E:\install_software\opencv\opencv_build\bin\libopencv_core440.dll</p>
+</li>
+<li><p>添加头文件即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;opencv2/core/core.hpp&gt;</span></span><br><span class="line"><span class="comment">#include &lt;opencv2/highgui/highgui.hpp&gt;</span></span><br><span class="line"><span class="comment">#include &lt;opencv2/opencv.hpp&gt;</span></span><br><span class="line"></span><br><span class="line">using namespace cv;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>请支持一包辣条吧<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://yanxuan.nosdn.127.net/05d2ee6a16f637910d76d76eb1c3eca1.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://yanxuan.nosdn.127.net/300a62f2490c6f17d511841dcae1f924.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -239,413 +390,60 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/git-used/" class="archive-article-date">
-  	<time datetime="2020-07-19T10:29:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/git-used/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">GIT使用笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/git-used/">GIT使用笔记</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/Qt-note/" class="archive-article-date">
-  	<time datetime="2020-07-19T09:38:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Qt-note/">Qt学习笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Qt</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/experience/" class="archive-article-date">
-  	<time datetime="2020-06-11T05:14:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/experience/">个人经历</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">简历</a>
-        		</li>
-      		
-		</ul>
-	</div>
+ 
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/spider-comic/" class="archive-article-date">
-  	<time datetime="2020-05-27T05:58:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/spider-comic/">python爬取漫画网站</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">代码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/spider-novels-thread/" class="archive-article-date">
-  	<time datetime="2020-05-24T13:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/spider-novels-thread/">python爬取小说多线程版本</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">代码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/spider-biquge/" class="archive-article-date">
-  	<time datetime="2020-05-21T08:35:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/spider-biquge/">python笔趣阁爬取</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">代码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/spider-pixiv/" class="archive-article-date">
-  	<time datetime="2020-05-16T02:43:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/spider-pixiv/">python图片爬虫</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">代码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ad-note/" class="archive-article-date">
-  	<time datetime="2020-04-30T01:36:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ad-note/">Altium Designer学习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Altium Designer</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/ros-note/" class="archive-article-date">
-  	<time datetime="2020-04-29T09:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/ros-note/">ROS学习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ROS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="page-number" href="/archives/2020/page/3/">3</a><a class="extend next" rel="next" href="/archives/2020/page/2/">下一页</a>
-    </nav>
-  
 
 
           </div>
@@ -670,8 +468,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
