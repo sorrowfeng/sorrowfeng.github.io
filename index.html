@@ -1,207 +1,259 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>ľ��ɿ� - ľ��ɿɵĲ���</title><meta name="author" content="��ɽ��"><meta name="copyright" content="��ɽ��"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="ľ��ɿɵĲ���">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ľ��ɿ�">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:site_name" content="ľ��ɿ�">
+<meta property="og:description" content="ľ��ɿɵĲ���">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="��ɽ��">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ľ��ɿ�',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-04-17 21:30:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.1.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/04/14/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-04-14T13:06:00.623Z" itemprop="datePublished">2022-04-14</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/04/14/hello-world/">Hello World</a>
-    </h1>
-  
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ľ��ɿ�</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">ľ��ɿ�</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/undefined/" title="Hello World"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/undefined/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-14T13:06:00.623Z" title="发表于 2022-04-14 21:06:00">2022-04-14</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+More info: Writing
+Run server$ hexo server
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+More info: Server
+Generate static files$ hexo generate
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+More info: Generating
+Deploy to remote sites$ hexo deploy
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+More info: Deployment
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/qt-with-opencv/" title="Qt配置opencv环境"><img class="post_bg" src="https://s1.ax1x.com/2020/08/02/ate2E6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Qt配置opencv环境"></a></div><div class="recent-post-info"><a class="article-title" href="/qt-with-opencv/" title="Qt配置opencv环境">Qt配置opencv环境</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-08-02T10:22:51.000Z" title="发表于 2020-08-02 18:22:51">2020-08-02</time></span></div><div class="content">需要工具
+Qt
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+安装框选模块, Qt开头的都选了
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/14/hello-world/" data-id="cl1z0nr360000c0uy7i5126no" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+cmake
+
+opencv
 
 
+配置环境变量
+加入cmake的环境变量
 
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li></ul>
-    </div>
-  </div>
+加入qt中mingw的环境变量
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/04/14/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+如 E:\install_software\Qt\Qt5.12.2\Tools\mingw730_32\bin
+解压opencv
+解压到如 E:\install_software\opencv
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+在opencv中新建文件夹存放编译输出opencv-build如E:\install_software\Qt\opencv\opencv-build
 
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+开始cmake
+选择源目录为opencv&#x2F;sources
+
+输出目录为opencv&#x2F;opencv-build
+
+点击configure
+
+选择MinGW Makefile, 下面选择第二个 本地
+
+选择qt中的gcc与g++路径如E:\install_software\Qt\Qt5.12.2\Tools\mingw730_32\bin\gcc.exe(和g++.exe)
 
 
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+下一步cmake
+勾选上WITH_QT 和WITH_OPENGL
+再选择QT5的正确目 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/git-used/" title="GIT使用笔记"><img class="post_bg" src="https://s1.ax1x.com/2020/07/19/UWJuZR.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GIT使用笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/git-used/" title="GIT使用笔记">GIT使用笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-19T10:29:59.000Z" title="发表于 2020-07-19 18:29:59">2020-07-19</time></span></div><div class="content">github新建ssh-keygit config --global user.name &quot;sorrowfeng&quot;git config --global user.email &quot;1399600304@qq.com&quot;ssh-keygen -t rsa -C &quot;1399600304@qq.com&quot;添加SSH-KEY文件在/user/.ssh
+
+上传到githubgit add .        添加文件， 点  .  表示添加所有文件git status     查看添加的状态git commit  -m  &quot;提交信息&quot;  git remote add origin git@github.com:xxxxx.git    添加远程地址git push -u origin master   推送，仓库是空的则加-u，否则不加git push origin master
+
+将github上的项目同步到本地首先需要在本地创建一个文件夹，作为项目的存放仓库，之后进入该文件夹下。初始化该目录为Git仓库git init将 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/Qt-note/" title="Qt学习笔记"><img class="post_bg" src="https://s1.ax1x.com/2020/07/19/UWJDW8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Qt学习笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/Qt-note/" title="Qt学习笔记">Qt学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-07-19T09:38:50.000Z" title="发表于 2020-07-19 17:38:50">2020-07-19</time></span></div><div class="content">main函数模板#include &lt;QApplication&gt;int main(int argc, char *argv[])&#123;    QApplication a(argc, argv);    return a.exec();&#125;
+
+方便调试时查看打印信息的方式#include &lt;QDebug&gt;//方便调试时的打印输出#define cout qDebug() &lt;&lt; &quot;[&quot; &lt;&lt; __FILE__ &lt;&lt; &quot;:&quot; &lt;&lt; __LINE__ &lt;&lt; &quot;] &quot;//最终输出: 能看到文件信息, 与第几行//[ ..\QDataStream\mainwidget.cpp : 51 ] &quot;sorrowfeng彭烈枫&quot; 100
+
+QWidget与QMainWindowQWidget不带菜单栏, 而QMainWindow有菜单栏
+
+打包exe的方法先将release里的exe文件拷贝到别的地方在qt自带的命令行里, cd到 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/experience/" title="个人经历"><img class="post_bg" src="https://s1.ax1x.com/2020/06/11/tHrX3F.md.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="个人经历"></a></div><div class="recent-post-info"><a class="article-title" href="/experience/" title="个人经历">个人经历</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-11T05:14:36.000Z" title="发表于 2020-06-11 13:14:36">2020-06-11</time></span></div><div class="content">ti杯比赛经历
+A题无线充电循迹小车
+
+正面
+
+背面
+
+获奖证书
 
 
+用msp430f149做飞控
+板球控制
+小车追踪物体
+小车pid控制距离
+pid风力控制
+手工制作PCB版
+正面
+背面
+
+PCB绘图
+整流电路
+七路抢答器
+FPGA四层电梯外设
+NRF24L01无线遥控小车遥控器
+模拟时钟
+爬虫项目
+爬取图片程序找图片链接
+
+爬取漫画程序找漫画链接
+
+爬取小说程序找小说链接
 
 
-<script src="/js/script.js"></script>
+证书
+计算机二级证书
+
+普通话证书
 
 
+成绩单
+
+感谢观看🌹
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/spider-comic/" title="python爬取漫画网站"><img class="post_bg" src="http://yanxuan.nosdn.127.net/bb8aaf99bd11f0eb934431477caecda6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python爬取漫画网站"></a></div><div class="recent-post-info"><a class="article-title" href="/spider-comic/" title="python爬取漫画网站">python爬取漫画网站</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-27T05:58:41.000Z" title="发表于 2020-05-27 13:58:41">2020-05-27</time></span></div><div class="content">打包exe下载地址点我蓝奏云下载
+运行截图
+运行界面
+
+文件夹下载情况
 
 
+python代码# -*- codeing: utf-8 -*-&#x27;&#x27;&#x27;@File    :   找漫画.py@Time    :   2020/05/25 19:04:33@Author  :   sorrowfeng @Version :   1.0@Contact :   1399600304@qq.com@WebSite :   https://sorrowfeng.github.io&#x27;&#x27;&#x27;# here put the import libimport base64import jsonimport osimport reimport socketimport threadingimport timeimport bs4import requestsimport randomimport urllib3from fake_useragent import UserAgentfrom lxml import etree, html# 将两个列表对应 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/spider-novels-thread/" title="python爬取小说多线程版本"><img class="post_bg" src="http://yanxuan.nosdn.127.net/21a929d6d313be9954b494a502d99764.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python爬取小说多线程版本"></a></div><div class="recent-post-info"><a class="article-title" href="/spider-novels-thread/" title="python爬取小说多线程版本">python爬取小说多线程版本</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-24T13:43:00.000Z" title="发表于 2020-05-24 21:43:00">2020-05-24</time></span></div><div class="content">运行界面
+代码# -*- codeing: utf-8 -*-&#x27;&#x27;&#x27;@File    :   找小说_多线程.py@Time    :   2020/05/24 21:44:25@Author  :   sorrowfeng @Version :   1.0@Contact :   1399600304@qq.com@WebSite :   https://sorrowfeng.github.io&#x27;&#x27;&#x27;# here put the import libimport requestsfrom lxml import etreeimport osimport threadingimport time search_url = &quot;http://www.xbiquge.la/modules/article/waps.php?searchkey=&quot;all_url = &quot;http://www.xbiquge.la/xiaoshuodaquan/&quot;# threadLock = threading.Lo ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/spider-biquge/" title="python笔趣阁爬取"><img class="post_bg" src="http://yanxuan.nosdn.127.net/e8b897311e61a1cf813007188e712e2c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python笔趣阁爬取"></a></div><div class="recent-post-info"><a class="article-title" href="/spider-biquge/" title="python笔趣阁爬取">python笔趣阁爬取</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-21T08:35:00.000Z" title="发表于 2020-05-21 16:35:00">2020-05-21</time></span></div><div class="content">代码# -*- codeing: utf-8 -*-&#x27;&#x27;&#x27;@File    :   找小说.py@Time    :   2020/05/21 16:38:01@Author  :   sorrowfeng @Version :   1.0@Contact :   1399600304@qq.com@WebSite :   https://sorrowfeng.github.io&#x27;&#x27;&#x27;# here put the import libimport requestsfrom lxml import etreeimport ossearch_url = &quot;http://www.xbiquge.la/modules/article/waps.php?searchkey=&quot;all_url = &quot;http://www.xbiquge.la/xiaoshuodaquan/&quot;# 将两个列表对应组和成一个新的字典def list_dic(list1,list2):    &#x27;&#x27;&#x2 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/spider-pixiv/" title="python图片爬虫"><img class="post_bg" src="http://yanxuan.nosdn.127.net/801ef35ae067db49393b9d383ae10e76.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python图片爬虫"></a></div><div class="recent-post-info"><a class="article-title" href="/spider-pixiv/" title="python图片爬虫">python图片爬虫</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-05-16T02:43:00.000Z" title="发表于 2020-05-16 10:43:00">2020-05-16</time></span></div><div class="content">图片爬取先附上效果图实现一键式下载图片
+exe执行程序找涩图, exe程序点击这里跳转蓝奏云下载
+python代码# -*- codeing: utf-8 -*-&#x27;&#x27;&#x27;@File    :   find_img.py@Time    :   2020/05/14 21:08:22@Author  :   sorrowfeng @Version :   1.0@Contact :   1399600304@qq.com@WebSite :   https://sorrowfeng.github.io&#x27;&#x27;&#x27;# here put the import libimport osimport reimport urllib.request, urllib.error, urllib.parseimport urllibimport timeimport socketimport jsonimport tkinter as tkimport threading    # 保存图片到本地def SaveImage(url, path):   ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/ad-note/" title="AltiumDesigner学习"><img class="post_bg" src="http://yanxuan.nosdn.127.net/986042e56f5523fc4bff794e4b6c4586.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AltiumDesigner学习"></a></div><div class="recent-post-info"><a class="article-title" href="/ad-note/" title="AltiumDesigner学习">AltiumDesigner学习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-04-30T01:36:00.000Z" title="发表于 2020-04-30 09:36:00">2020-04-30</time></span></div><div class="content">Altium Designer学习
+ 
 
-  </div>
-</body>
-</html>
+一般步骤1. 1）新建工程（项目）    2）file-new-project-PCB project    3）为工程重命名并保存2. 1）.新建schematic（原理图）    2）.为原理图重命名并保存    3）.新建PCB文档  file-new-PCB        4）.重命名并保存3.画元件库（原理图库） 	库（标准库，非标准库） 	改元件属性，如果是芯片就写U?，也可以是其他的，比如R?、C？等	*****在原理图库中画没有的原理图时记得改U?（tools-component properties）	阵列式粘贴：	可以一次粘贴出多个，如在放置多个管脚时，先复制一个，然后按e再按y（或edit-paste Array），			选好参数后（如要改变方向，将间距值改为负数即可），在目标位置按下鼠标左键4.画原理图	画好原理图，并连好线5.编号 tools-annotate schematic （标注-原理图标注）	-reset all-update changes list（更新改变列表）-accept changes(creat ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">��ɽ��</div><div class="author-info__description">ľ��ɿɵĲ���</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/undefined/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/undefined/" title="Hello World">Hello World</a><time datetime="2022-04-14T13:06:00.623Z" title="发表于 2022-04-14 21:06:00">2022-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qt-with-opencv/" title="Qt配置opencv环境"><img src="https://s1.ax1x.com/2020/08/02/ate2E6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Qt配置opencv环境"/></a><div class="content"><a class="title" href="/qt-with-opencv/" title="Qt配置opencv环境">Qt配置opencv环境</a><time datetime="2020-08-02T10:22:51.000Z" title="发表于 2020-08-02 18:22:51">2020-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/git-used/" title="GIT使用笔记"><img src="https://s1.ax1x.com/2020/07/19/UWJuZR.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GIT使用笔记"/></a><div class="content"><a class="title" href="/git-used/" title="GIT使用笔记">GIT使用笔记</a><time datetime="2020-07-19T10:29:59.000Z" title="发表于 2020-07-19 18:29:59">2020-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Qt-note/" title="Qt学习笔记"><img src="https://s1.ax1x.com/2020/07/19/UWJDW8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Qt学习笔记"/></a><div class="content"><a class="title" href="/Qt-note/" title="Qt学习笔记">Qt学习笔记</a><time datetime="2020-07-19T09:38:50.000Z" title="发表于 2020-07-19 17:38:50">2020-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/experience/" title="个人经历"><img src="https://s1.ax1x.com/2020/06/11/tHrX3F.md.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="个人经历"/></a><div class="content"><a class="title" href="/experience/" title="个人经历">个人经历</a><time datetime="2020-06-11T05:14:36.000Z" title="发表于 2020-06-11 13:14:36">2020-06-11</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/AltiumDesigner/" style="font-size: 1.1em; color: #999">AltiumDesigner</a> <a href="/tags/AutoCAD/" style="font-size: 1.1em; color: #999">AutoCAD</a> <a href="/tags/C/" style="font-size: 1.1em; color: #999">C++</a> <a href="/tags/Golang/" style="font-size: 1.1em; color: #999">Golang</a> <a href="/tags/HelloWorld/" style="font-size: 1.1em; color: #999">HelloWorld</a> <a href="/tags/Laser/" style="font-size: 1.1em; color: #999">Laser</a> <a href="/tags/Linux/" style="font-size: 1.1em; color: #999">Linux</a> <a href="/tags/Qt/" style="font-size: 1.23em; color: #999ea6">Qt</a> <a href="/tags/ROS/" style="font-size: 1.1em; color: #999">ROS</a> <a href="/tags/SQLserver/" style="font-size: 1.1em; color: #999">SQLserver</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/java/" style="font-size: 1.1em; color: #999">java</a> <a href="/tags/opencv/" style="font-size: 1.1em; color: #999">opencv</a> <a href="/tags/python/" style="font-size: 1.37em; color: #99a4b2">python</a> <a href="/tags/stm32/" style="font-size: 1.1em; color: #999">stm32</a> <a href="/tags/%E4%BA%9A%E7%B4%A2/" style="font-size: 1.1em; color: #999">亚索</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 1.37em; color: #99a4b2">代码</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 1.5em; color: #99a9bf">学习笔记</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 1.1em; color: #999">游戏</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.37em; color: #99a4b2">爬虫</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" style="font-size: 1.1em; color: #999">环境配置</a> <a href="/tags/%E7%AE%80%E5%8E%86/" style="font-size: 1.1em; color: #999">简历</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%89%E7%BA%A7/" style="font-size: 1.1em; color: #999">计算机三级</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/08/"><span class="card-archive-list-date">八月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/07/"><span class="card-archive-list-date">七月 2020</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/05/"><span class="card-archive-list-date">五月 2020</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/04/"><span class="card-archive-list-date">四月 2020</span><span class="card-archive-list-count">12</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/04/"><span class="card-archive-list-date">四月 2019</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">22</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-04-17T13:30:52.623Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By ��ɽ��</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

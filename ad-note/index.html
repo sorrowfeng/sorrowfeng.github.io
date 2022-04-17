@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>AltiumDesigner学习 | ľ��ɿ�</title><meta name="keywords" content="AltiumDesigner,学习笔记"><meta name="author" content="��ɽ��"><meta name="copyright" content="��ɽ��"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Altium Designer学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AltiumDesigner学习">
+<meta property="og:url" content="http://example.com/ad-note/index.html">
+<meta property="og:site_name" content="ľ��ɿ�">
+<meta property="og:description" content="Altium Designer学习">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yanxuan.nosdn.127.net/986042e56f5523fc4bff794e4b6c4586.jpg">
+<meta property="article:published_time" content="2020-04-30T01:36:00.000Z">
+<meta property="article:modified_time" content="2020-11-10T11:25:05.566Z">
+<meta property="article:author" content="��ɽ��">
+<meta property="article:tag" content="AltiumDesigner">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yanxuan.nosdn.127.net/986042e56f5523fc4bff794e4b6c4586.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/ad-note/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'AltiumDesigner学习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-11-10 19:25:05'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://yanxuan.nosdn.127.net/986042e56f5523fc4bff794e4b6c4586.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ľ��ɿ�</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">AltiumDesigner学习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-04-30T01:36:00.000Z" title="发表于 2020-04-30 09:36:00">2020-04-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-10T11:25:05.566Z" title="更新于 2020-11-10 19:25:05">2020-11-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="AltiumDesigner学习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>Altium Designer学习</strong><br><img src="http://yanxuan.nosdn.127.net/986042e56f5523fc4bff794e4b6c4586.jpg" alt="picture12.jpg"></p>
+ <span id="more"></span>
+
+<h1 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. 1）新建工程（项目）</span><br><span class="line">    2）file-new-project-PCB project</span><br><span class="line">    3）为工程重命名并保存</span><br><span class="line">2. 1）.新建schematic（原理图）</span><br><span class="line">    2）.为原理图重命名并保存</span><br><span class="line">    3）.新建PCB文档  file-new-PCB    </span><br><span class="line">    4）.重命名并保存</span><br><span class="line">3.画元件库（原理图库） 	库（标准库，非标准库） </span><br><span class="line">	改元件属性，如果是芯片就写U?，也可以是其他的，比如R?、C？等</span><br><span class="line">	*****在原理图库中画没有的原理图时记得改U?（tools-component properties）</span><br><span class="line">	阵列式粘贴：	可以一次粘贴出多个，如在放置多个管脚时，先复制一个，然后按e再按y（或edit-paste Array），</span><br><span class="line">			选好参数后（如要改变方向，将间距值改为负数即可），在目标位置按下鼠标左键</span><br><span class="line">4.画原理图</span><br><span class="line">	画好原理图，并连好线</span><br><span class="line">5.编号 tools-annotate schematic （标注-原理图标注）</span><br><span class="line">	-reset all-update changes list（更新改变列表）-accept changes(create eco)（确认变更）</span><br><span class="line">	-validate changes（验证变更）-execute changes（执行变更）</span><br><span class="line">6.分配封装，没有的要先画封装</span><br><span class="line">	焊盘旁边一定要有阻焊，阻焊的作用是滤油，阻焊比焊盘要大一点</span><br><span class="line">	通孔焊盘-Muti-Layer</span><br><span class="line">	表贴焊盘-Top-Layer</span><br><span class="line">	保存并命名tools-component properties</span><br><span class="line">	利用向导制作封装tools-IPC Footprint Wizard</span><br><span class="line">7.生成元器件清单 reports-bill of materials-export</span><br><span class="line">8.检查错误 project-compile document （或右键原理图文件名）</span><br><span class="line">9.绘制PCB图（印刷电路板）</span><br><span class="line">    1）新建PCB文档  file-new-PCB    重命名并保存</span><br><span class="line">    2）options-board options-lines改为dots （将线改为点）                     </span><br><span class="line">    3）reports-bill of materials  （查看是否封装）                 footprint 封装      PCB footprint封装库            DIP8</span><br><span class="line">    4）双击元器件添加封装   右下角add-brouse-搜索封装（如DIP8）</span><br><span class="line">    5）将原理图导向PCB   design-update（原理图有任何改变都要重新导入）   ，或者在pcb界面选择import    </span><br><span class="line">    6）新建封装库file-new-library-PCB library  重命名并保存（统一存到文件夹库中）</span><br><span class="line">    7）画没有的封装（如DS18B20）</span><br><span class="line">	画3D封装在place-3D元件体（B）</span><br><span class="line">    8）放上一个坐标圆圈edit-origin-set</span><br><span class="line">    9）画线并把颜色改为keep out lay</span><br><span class="line">    10）裁剪design-board shape-redefine board shape</span><br><span class="line">    11）布线 Auto Route-all</span><br><span class="line">    12）查看3D视图view-legacy 3D</span><br><span class="line">10.敷铜       “A”图标左边的 ，先布+5V，右边改+5V，左边写Top Layer-VCC，下面选Top Layer</span><br><span class="line">接下来布GND，右边选GND，左边改为Bottom Layer-GND，下面选Bottom Layer</span><br></pre></td></tr></table></figure>
+
+<h1 id="pcb快速排布"><a href="#pcb快速排布" class="headerlink" title="pcb快速排布"></a>pcb快速排布</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">在 tools-器件摆放（O）-在矩形区域摆放（L）可以快速排布所有器件，先选中所有器件，点击前面的按钮之后，鼠标画一个矩形，就可以把器件放在矩形中了</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">place-尺寸-线性尺寸，可以防止显示长度的描述，放在物理层</span><br><span class="line">按住<span class="built_in">shift</span>键选中矩形边框，d-s-d设计-板子形状-按照选择对象定义，可以快速裁剪板子大小</span><br><span class="line">固定柱一般放在顶点之后，再向里移动xy5mm</span><br><span class="line">设计-层叠管理器，右键top信号层添加新层，往下添加，改个名字方便识别层数（GND02，表示第二层）,一般加负片层	正片层，负片层，新板，pb片，表面处理</span><br><span class="line">top（正片层）中走线处是有铜的地方，而负片层中走线处是没有铜覆盖，其余地方都是铜，双击可以添加属性</span><br></pre></td></tr></table></figure>
+
+<h1 id="class、设计参数、规则的创建"><a href="#class、设计参数、规则的创建" class="headerlink" title="class、设计参数、规则的创建"></a>class、设计参数、规则的创建</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">DC（设计-类）创建一个PWR类，把电源都加进去，然后在右下角打开PCB，右键PWR可以选择显示-隐藏，就可以清晰的显示信号的流向</span><br><span class="line">DR（设计-规则）常用：线距规则（大于6mil，4到6mil，小于4mil三个等级，越小越精密）</span><br><span class="line">线距规则：Electrical-Clearance-Clearance</span><br><span class="line">线宽规则：Routing-Wdith	注意下面的优先级，把电源的调上去才会生效，不然优先使用信号线宽，列表中有个使能的勾，选上才能生效</span><br><span class="line">过孔规则：Routing-Routing Via Style-RoutingVias，孔径尽量在12mil以上，盘的大小（2*孔径+-2mil），即22-26，设置可设为22mil</span><br><span class="line">	在右上角设置pcb editor-defaults-via，修改默认盘大小，再把滤油勾上（下面两个Tented）</span><br><span class="line">铺铜规则：Plane-Power Plane Connect Style-PlaneConnect，设置连接方式，交叉型，还是全连接</span><br><span class="line">	Plane-Power Plane Clearance-PlaneClearance，设置反焊盘的间距，从过孔到外部铜之间的间距，叫反焊盘，一般设置为8mil</span><br><span class="line">	Plane-Polygon Connect Style（正片层），一般采用十字连接，如果考虑载流采用全连接，一般焊盘采用十字连接，过孔用全连接（在高级里面）</span><br><span class="line">丝印规则：Manufacturing-Silk To Solder Mask Clearance-SilkToSolderMaskClearance，丝印与阻焊的距离，一般设置为2mil</span><br><span class="line">	Manufacturing-Silk To Silk Mask Clearance-SilkToSilkMaskClearance，丝印与丝印的距离，也设置为2mil</span><br><span class="line">	在t-d（设计-设计规则检查）规则检查上勾选上Manufacturing-Silk To Solder Mask Clearance，两个勾选上</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="扇孔的处理及敷铜插件的应用"><a href="#扇孔的处理及敷铜插件的应用" class="headerlink" title="扇孔的处理及敷铜插件的应用"></a>扇孔的处理及敷铜插件的应用</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">敷铜脚本：在文件-运行脚本中，运行main文件</span><br><span class="line">扇孔目的：打孔占位，防止其它层走线时覆盖；减少回流路径，就近打孔，比如GND，这样信号行进的路劲就短了，信号质量更高</span><br><span class="line">敷铜时把属性里的设置改为Pour Over All Same Net Objects，并把下面的去除死铜勾上Remove Dead Copper</span><br><span class="line">敷铜时按空格，可以更快的调整敷铜形状</span><br></pre></td></tr></table></figure>
+
+<h1 id="连线技巧：一般短线直连，长线就近打孔"><a href="#连线技巧：一般短线直连，长线就近打孔" class="headerlink" title="连线技巧：一般短线直连，长线就近打孔"></a>连线技巧：一般短线直连，长线就近打孔</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">焊盘从中心出线，不从角上出线</span><br><span class="line">一般20mil过1A电流</span><br><span class="line">选择时在右边的筛选中选择Tracks和Vias，就可以只选择走线与过孔</span><br><span class="line">对于信号走线，能少打孔就少打孔</span><br><span class="line">按住ctrl键左键拖动线条，可以对线进行方便的修正</span><br><span class="line">修线时尽量让线之间的距离一样</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="灌铜"><a href="#灌铜" class="headerlink" title="灌铜"></a>灌铜</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">可以先按L只查看某些层，把top和buttom灌好铜</span><br><span class="line">之后要对铜皮进行修整，按place-多边形挖空，把尖角的铜皮挖掉，再重新灌铜</span><br><span class="line">焊盘之间的铜可以直接挖掉</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="DRC检查与丝印"><a href="#DRC检查与丝印" class="headerlink" title="DRC检查与丝印"></a>DRC检查与丝印</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">t-d选好检查选项后，点击下方的运行DRC，先把全部取消掉，只留Electrical检查电器属性，没问题之后可以加上别的，比如丝印之间的距离SilkToSilkMaskClearance</span><br><span class="line">重新铺铜的方法：选中所有铜皮，向上移出去（如200mm），再执行工具-铺铜-所有铜重铺，然后把铜皮移回来，执行工具-铺铜-重铺选中的铺铜</span><br><span class="line">丝印推荐字宽/字高：4/25mil、5/30mil、6/45mil，推荐字母放在左或下</span><br><span class="line">调整丝印时，可以按L，只打开丝印层（Top Overlay），物理层，板框层（Mechanical），阻焊层（Top Solder）</span><br><span class="line">丝印不要放在阻焊上，但可以放在过孔上，因为过孔先打，上油之后再刷丝印</span><br><span class="line">使用logo导入脚本，要把图片变为位图格式，比如单色位图</span><br><span class="line">要调整图片的大小，先创建联合，再调整联合的大小</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="拼板"><a href="#拼板" class="headerlink" title="拼板"></a>拼板</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">把几个单片板拼合在一起，可以节约成本，提升SMT效率，节省PCBA拿放时间</span><br><span class="line">	v-cut：切板子切成v型，但不切断，这样只要用手一掰就能掰断，适合比较规则形状的板子</span><br><span class="line">	注意：工艺边：3-5mm，定位孔，光学定位点，间距或者器件冲突</span><br><span class="line">	邮件孔拼板：一般邮票孔使用孔径为直径0.8mm大小的非金属化孔，孔与孔之间的间距1.1mm左右，孔的个数5个最佳</span><br><span class="line">	母板改变后，拼板也会随之改变	</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="拼板操作"><a href="#拼板操作" class="headerlink" title="拼板操作"></a>拼板操作</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">新建一个pcb，</span><br><span class="line">点击放置-拼板阵列，然后按tab选择想要拼的板，还要横竖的数量</span><br><span class="line">调整拼板之间的距离，让板子之间的距离为0</span><br><span class="line">板层数不一致报警告，选自动添加，再去改下每层的名字</span><br><span class="line">画工艺边，5mm，左右加上工艺边，再选中边界dsd裁剪板子</span><br><span class="line">放定位点用的是焊盘，修改孔径和孔的大小都为3mm	</span><br><span class="line">放在角上，再xy向里移2.5mm</span><br><span class="line">再放一个光学定位点，用表贴焊盘，孔径1mm，放在top层，如果底层也有器件的话也要放一个</span><br><span class="line">注意光学定位点不能放四个，一般放三个，方便机器定位</span><br><span class="line">在中间层工艺边敷上铜，用填充，敷铜点不了</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="自动添加缝合孔"><a href="#自动添加缝合孔" class="headerlink" title="自动添加缝合孔"></a>自动添加缝合孔</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">工具-缝合孔-给网络添加缝合孔，选择约束区域手动画区域，画完会回到窗口，设置栅格150mil，孔径12mil，直径22mil，选择网络，勾上顶层底层强制盖油，点击确定</span><br></pre></td></tr></table></figure>
+
+<h1 id="Gerber文件的输出与整理"><a href="#Gerber文件的输出与整理" class="headerlink" title="Gerber文件的输出与整理"></a>Gerber文件的输出与整理</h1><h2 id="装配图的输出"><a href="#装配图的输出" class="headerlink" title="装配图的输出"></a>装配图的输出</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">f-智能PDF，去掉到处BOM表，右键create AssemblyDrawings，</span><br><span class="line">	一般留有丝印层，板框层，阻焊层，把Holes勾上，底层再勾上Mirror，下一步去掉上升网络信息，还可以选择颜色，一般单色，</span><br><span class="line">	之后把保存批量输出文件去掉，然后点击完成（比下面的方法更清晰）</span><br><span class="line">	</span><br><span class="line">	或装配输出-AssemblyDrawings，点击打印，就可以保存并打印</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="BOM文件的输出"><a href="#BOM文件的输出" class="headerlink" title="BOM文件的输出"></a>BOM文件的输出</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">报告-bill of materials-export，在右侧的column下可以选择要输出的东西，一般描述和参考封装libref可以去掉，也可以在右下角选择模板，点击<span class="built_in">export</span>导出</span><br></pre></td></tr></table></figure>
+
+<h2 id="Gerber文件的输出"><a href="#Gerber文件的输出" class="headerlink" title="Gerber文件的输出"></a>Gerber文件的输出</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">先把文件夹中不要的文件删了，比如<span class="built_in">history</span>等子文件夹</span><br><span class="line">	file-制造输出-Gerberfile，单位选择英寸，格式2:4（2:3舍去小数后一位），绘制层掉箭头选择使用的层，镜像层全部去掉，物理层1下面的都可以去掉，右边的机械层1可以勾上</span><br><span class="line">		输出所有的钻孔对，两个都勾上，光圈默认，把胶片规则加个0	，其他默认点击确定</span><br><span class="line">	再输出钻孔文件，file-制造输出-NC Drill Files，同样英寸，2:4，点击确定，再点确定</span><br><span class="line">	再输出坐标文件，file-装配输出-Generates pick and place files，选择英制单位，文本格式，描述可以去掉，点击确定</span><br><span class="line">	再输出IPC网表，file-制造输出-Test Point Report，选择IPC-D-356A，点击确定输出，再点确定</span><br><span class="line">	cam文件可以关掉，不保存，然后可以关了AD，删了<span class="built_in">history</span>文件夹，修改一些输出文件的名字</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件的整理"><a href="#文件的整理" class="headerlink" title="文件的整理"></a>文件的整理</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">建立四个文件夹，如NRF小车遥控器-ASM，NRF小车遥控器-BOM，NRF小车遥控器-CAM，NRF小车遥控器-PRJ</span><br><span class="line">	然后将之前输出文件夹的文件全部拷贝到CAM文件夹中，之前的就可以删了</span><br><span class="line">	将装配图，bom表移到ASM中，并把CAM中的坐标文件与GTP和GBP（底层有器件就有GBP）拷贝到ASM中</span><br><span class="line">	将bom表复制到BOM中</span><br><span class="line">	剩下的工程文件就放到PRJ中</span><br><span class="line">生产直接打包CAM文件发给厂家就行了</span><br></pre></td></tr></table></figure>
+
+<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">电容（<span class="built_in">cap</span>）   电池（battery）   电阻（res）  晶振（XTAL） 三极管（pnp） 蜂鸣器（bell） 按键（sw-pb） 数码管（Dpy）</span><br><span class="line"></span><br><span class="line">快捷键：	按住<span class="built_in">shift</span>键可以多选</span><br><span class="line">	ctrl+q修改mil与mm的显示切换</span><br><span class="line">	按住Ctrl 拖动某个元件 可以移动位置 并且保持原来的线连接</span><br><span class="line">	选中后按ctrl+方向键可以移动</span><br><span class="line">	按住<span class="built_in">shift</span>拖动元件可以复制</span><br><span class="line">	在SCH library中可以进行元件的复制操作</span><br><span class="line">	双击原理图边缘可以修改纸张大小，或者右键选择Options-Documents Options</span><br><span class="line">	在拖动的状态下按x可以实现镜像翻转</span><br><span class="line">	在画原理图时，按下快捷键a，弹出对齐的命令</span><br><span class="line">	按住CTRL左键点击弹出的命令，可以自定义快捷键，在alternative栏，即可选的意思</span><br><span class="line">	编号快捷键先按t再按a</span><br><span class="line">	T-G封装管理器，可以对封装统一管理</span><br><span class="line">	按住ALT键点击网络，可以高亮显示网络	</span><br><span class="line">	place-directives-NO ERC放置在端口上，表示当前位置无连接</span><br><span class="line">	PCB中复制，ctrl+c后先点击一下左键，选择原点再ctrl+v才能复制成功</span><br><span class="line">	PCB中选择元件后，按m，再选择move selection by X,Y可以按左边精准移动</span><br><span class="line">	快速将原点定位到中心E-F-C</span><br><span class="line">	<span class="built_in">shift</span>+s可以切换单层视图模式，快速删除辅助线，单层显示</span><br><span class="line">	e-k（edit-silce tracks）裁剪导线</span><br><span class="line">	按住<span class="built_in">shift</span>加右键，在3D视图中可以旋转</span><br><span class="line">	在design-make PCB library可以根据PCB图来生成封装库</span><br><span class="line">	也可以单独复制一个（要左键单击一下），再到自己的库列表（PCB library）中粘贴出来</span><br><span class="line">	<span class="built_in">shift</span>+c去除测量标注</span><br><span class="line">	<span class="built_in">shift</span>+e自动吸附端点</span><br><span class="line">	ctrl+d切换3D</span><br><span class="line">	在放置3D层时moudle <span class="built_in">type</span>选择generic，下面的导入可以导入本地文件，也可以在place处选择3Dbody是放置模型的，3D元件体是可以自己画的</span><br><span class="line">	bug：3D时旋转时要切换输入法为系统输入法才能正常旋转</span><br><span class="line">	ctrl +m 测量      top overlay表面丝印层（黄色）</span><br><span class="line">	j-c可以快速查找元器件</span><br><span class="line">	m-s可以用移动选中对象</span><br><span class="line">	ctrl+h选中物理上连接的东西（无视网络）</span><br><span class="line">	s-n选择网络</span><br><span class="line">	<span class="built_in">shift</span>+r切换走线模式（忽略障碍物，绕开障碍物等等）</span><br><span class="line">	DC创建一个PWR类，把电源都加进去，然后在右下角打开PCB，右键PWR可以选择显示-隐藏，就可以清晰的显示信号的流向</span><br><span class="line">	选中几个器件，右键形成联合，可以将几个器件变为一个整体</span><br><span class="line">	查找相似选中所有位号，改大小（10mil，2mil），a定位器件文本，可以把位号统一放在同一个位置，注意要同时选中器件和丝印位号放置才会起作用</span><br><span class="line">	t-c选择元件可以快速定位在另一页面中的位置（如在pcb中定位原理图中的位置）</span><br><span class="line">	ctrl+左键高亮之后，按  [  与  ]  可以减弱与加强其他部分的亮度</span><br><span class="line">	v-b翻转板子</span><br><span class="line">	n出现显示连线的选项</span><br><span class="line">	按F5可以去掉颜色（绿色）</span><br><span class="line">	u-m交互式总线布线，选中需要一起走线的线，可以多根线一起走线</span><br><span class="line">	在电源层（GND层、VCC层）按下p-l可以对平面进行分割</span><br><span class="line">	小键盘+-可以快速切层</span><br><span class="line">	e-a特殊粘贴，可以把复制的分层快速粘贴到其它层</span><br><span class="line">	按L可以选择想要显示的层</span><br><span class="line">	<span class="built_in">shift</span>+空格可以快速吸附，比如在敷铜时</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">自设快捷键：</span><br><span class="line">	alt+z删除整根网络</span><br><span class="line">	F2连线 </span><br><span class="line">	F3过孔 </span><br><span class="line">	F4敷铜</span><br><span class="line">	4将选中的元件整合排布到矩形中</span><br><span class="line">	6线选</span><br><span class="line">	7框选</span><br><span class="line">	小键盘8246上下左右对齐</span><br><span class="line">	小键盘7水平方向等间距排布</span><br><span class="line">	小键盘9垂直方向等间距排布</span><br><span class="line">	小键盘5定位器件文本，可以配合使用，选中器件和丝印按5-2，快速把丝印放到下面</span><br><span class="line"></span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">��ɽ��</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/ad-note/">http://example.com/ad-note/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">ľ��ɿ�</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/AltiumDesigner/">AltiumDesigner</a><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></div><div class="post_share"><div class="social-share" data-image="http://yanxuan.nosdn.127.net/986042e56f5523fc4bff794e4b6c4586.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/spider-pixiv/"><img class="prev-cover" src="http://yanxuan.nosdn.127.net/801ef35ae067db49393b9d383ae10e76.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">python图片爬虫</div></div></a></div><div class="next-post pull-right"><a href="/ros-note/"><img class="next-cover" src="http://yanxuan.nosdn.127.net/576bd3ecf4ccd416258840e84ed61122.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ROS学习</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/autocad-note/" title="AutoCAD学习"><img class="cover" src="https://s1.ax1x.com/2020/11/10/BL2zDJ.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-04-03</div><div class="title">AutoCAD学习</div></div></a></div><div><a href="/c++note/" title="C++学习"><img class="cover" src="http://yanxuan.nosdn.127.net/27ad4240afb3fa07197eaec257022c89.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-04-03</div><div class="title">C++学习</div></div></a></div><div><a href="/git-used/" title="GIT使用笔记"><img class="cover" src="https://s1.ax1x.com/2020/07/19/UWJuZR.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-19</div><div class="title">GIT使用笔记</div></div></a></div><div><a href="/linux-note/" title="Linux学习"><img class="cover" src="http://yanxuan.nosdn.127.net/77fafe855fffa4e29aa30b56af8af642.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-04-03</div><div class="title">Linux学习</div></div></a></div><div><a href="/golang-note/" title="go语言学习"><img class="cover" src="http://yanxuan.nosdn.127.net/8f4f53c328ba7a1e1b8d98fb0129463a.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-04-09</div><div class="title">go语言学习</div></div></a></div><div><a href="/Qt-note/" title="Qt学习笔记"><img class="cover" src="https://s1.ax1x.com/2020/07/19/UWJDW8.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-19</div><div class="title">Qt学习笔记</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">��ɽ��</div><div class="author-info__description">ľ��ɿɵĲ���</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.</span> <span class="toc-text">一般步骤</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pcb%E5%BF%AB%E9%80%9F%E6%8E%92%E5%B8%83"><span class="toc-number">2.</span> <span class="toc-text">pcb快速排布</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#class%E3%80%81%E8%AE%BE%E8%AE%A1%E5%8F%82%E6%95%B0%E3%80%81%E8%A7%84%E5%88%99%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="toc-number">3.</span> <span class="toc-text">class、设计参数、规则的创建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%87%E5%AD%94%E7%9A%84%E5%A4%84%E7%90%86%E5%8F%8A%E6%95%B7%E9%93%9C%E6%8F%92%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">扇孔的处理及敷铜插件的应用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9E%E7%BA%BF%E6%8A%80%E5%B7%A7%EF%BC%9A%E4%B8%80%E8%88%AC%E7%9F%AD%E7%BA%BF%E7%9B%B4%E8%BF%9E%EF%BC%8C%E9%95%BF%E7%BA%BF%E5%B0%B1%E8%BF%91%E6%89%93%E5%AD%94"><span class="toc-number">5.</span> <span class="toc-text">连线技巧：一般短线直连，长线就近打孔</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%81%8C%E9%93%9C"><span class="toc-number">6.</span> <span class="toc-text">灌铜</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DRC%E6%A3%80%E6%9F%A5%E4%B8%8E%E4%B8%9D%E5%8D%B0"><span class="toc-number">7.</span> <span class="toc-text">DRC检查与丝印</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%BC%E6%9D%BF"><span class="toc-number">8.</span> <span class="toc-text">拼板</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8B%BC%E6%9D%BF%E6%93%8D%E4%BD%9C"><span class="toc-number">9.</span> <span class="toc-text">拼板操作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0%E7%BC%9D%E5%90%88%E5%AD%94"><span class="toc-number">10.</span> <span class="toc-text">自动添加缝合孔</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gerber%E6%96%87%E4%BB%B6%E7%9A%84%E8%BE%93%E5%87%BA%E4%B8%8E%E6%95%B4%E7%90%86"><span class="toc-number">11.</span> <span class="toc-text">Gerber文件的输出与整理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A3%85%E9%85%8D%E5%9B%BE%E7%9A%84%E8%BE%93%E5%87%BA"><span class="toc-number">11.1.</span> <span class="toc-text">装配图的输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOM%E6%96%87%E4%BB%B6%E7%9A%84%E8%BE%93%E5%87%BA"><span class="toc-number">11.2.</span> <span class="toc-text">BOM文件的输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gerber%E6%96%87%E4%BB%B6%E7%9A%84%E8%BE%93%E5%87%BA"><span class="toc-number">11.3.</span> <span class="toc-text">Gerber文件的输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E6%95%B4%E7%90%86"><span class="toc-number">11.4.</span> <span class="toc-text">文件的整理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">12.</span> <span class="toc-text">快捷键</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/undefined/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/undefined/" title="Hello World">Hello World</a><time datetime="2022-04-14T13:06:00.623Z" title="发表于 2022-04-14 21:06:00">2022-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/qt-with-opencv/" title="Qt配置opencv环境"><img src="https://s1.ax1x.com/2020/08/02/ate2E6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Qt配置opencv环境"/></a><div class="content"><a class="title" href="/qt-with-opencv/" title="Qt配置opencv环境">Qt配置opencv环境</a><time datetime="2020-08-02T10:22:51.000Z" title="发表于 2020-08-02 18:22:51">2020-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/git-used/" title="GIT使用笔记"><img src="https://s1.ax1x.com/2020/07/19/UWJuZR.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GIT使用笔记"/></a><div class="content"><a class="title" href="/git-used/" title="GIT使用笔记">GIT使用笔记</a><time datetime="2020-07-19T10:29:59.000Z" title="发表于 2020-07-19 18:29:59">2020-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/Qt-note/" title="Qt学习笔记"><img src="https://s1.ax1x.com/2020/07/19/UWJDW8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Qt学习笔记"/></a><div class="content"><a class="title" href="/Qt-note/" title="Qt学习笔记">Qt学习笔记</a><time datetime="2020-07-19T09:38:50.000Z" title="发表于 2020-07-19 17:38:50">2020-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/experience/" title="个人经历"><img src="https://s1.ax1x.com/2020/06/11/tHrX3F.md.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="个人经历"/></a><div class="content"><a class="title" href="/experience/" title="个人经历">个人经历</a><time datetime="2020-06-11T05:14:36.000Z" title="发表于 2020-06-11 13:14:36">2020-06-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By ��ɽ��</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
