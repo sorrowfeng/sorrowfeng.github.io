@@ -10,11 +10,13 @@
     body {
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      padding: 60px 20px 80px;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      overflow: hidden;
       background: #080818;
+      overflow-x: hidden;
     }
 
     /* ── Aurora background ── */
@@ -47,7 +49,6 @@
     .b4 { width: 350px; height: 350px; top: 10%; right: 20%;
           background: radial-gradient(circle, rgba(16,185,129,.3), transparent 65%);
           animation-delay: -2s; }
-
     @keyframes drift {
       0%,100% { transform: translate(0,0) scale(1); }
       33%      { transform: translate(35px,-40px) scale(1.07); }
@@ -62,8 +63,7 @@
     .shoot span {
       position: absolute;
       display: block;
-      width: 2px;
-      height: 2px;
+      width: 2px; height: 2px;
       background: #fff;
       border-radius: 50%;
       box-shadow: 0 0 6px 2px rgba(255,255,255,.6);
@@ -80,10 +80,10 @@
     @keyframes shoot {
       0%   { transform: translate(0,0); opacity: 1; }
       70%  { opacity: 1; }
-      100% { transform: translate(250px, 120px); opacity: 0; }
+      100% { transform: translate(250px,120px); opacity: 0; }
     }
 
-    /* ── Card ── */
+    /* ── Profile card ── */
     .card {
       position: relative;
       z-index: 10;
@@ -99,9 +99,8 @@
         0 32px 64px rgba(0,0,0,.5),
         0 0 120px rgba(124,58,237,.12);
       animation: rise .9s cubic-bezier(.16,1,.3,1) both;
-      min-width: 360px;
+      width: min(420px, 100%);
     }
-    /* glowing card border shimmer */
     .card::before {
       content: '';
       position: absolute;
@@ -157,7 +156,6 @@
       object-fit: cover;
       border: 3px solid #080818;
     }
-    /* pulse glow on avatar */
     .avatar-glow {
       position: absolute;
       inset: -12px;
@@ -188,7 +186,7 @@
       50%      { background-position: 100% 50%; }
     }
 
-    /* ── Typing tagline ── */
+    /* ── Tagline ── */
     .tagline {
       font-size: .95rem;
       color: rgba(255,255,255,.45);
@@ -266,17 +264,139 @@
     .link:hover::before { opacity: 1; }
     .link svg { flex-shrink: 0; }
 
-    /* ── Divider ── */
-    .divider {
-      width: 40px; height: 1px;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,.2), transparent);
-      margin: 28px auto 0;
-      animation: fadeUp .8s .85s both;
-    }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(14px); }
       to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Projects section ── */
+    .section {
+      position: relative;
+      z-index: 10;
+      width: min(760px, 100%);
+      margin-top: 40px;
+      animation: fadeUp .8s 1s both;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+    .section-title {
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+    }
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(255,255,255,.1), transparent);
+    }
+
+    /* ── Project cards grid ── */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .proj-card {
+      position: relative;
+      background: rgba(255,255,255,.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px;
+      padding: 22px 22px 18px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: all .25s cubic-bezier(.4,0,.2,1);
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .proj-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(124,58,237,.08), rgba(219,39,119,.06));
+      opacity: 0;
+      transition: opacity .25s;
+    }
+    .proj-card::after {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 21px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(124,58,237,.5), rgba(37,99,235,.3), rgba(219,39,119,.4));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      opacity: 0;
+      transition: opacity .25s;
+      pointer-events: none;
+    }
+    .proj-card:hover { transform: translateY(-5px);
+                       box-shadow: 0 16px 40px rgba(0,0,0,.45), 0 0 30px rgba(124,58,237,.15); }
+    .proj-card:hover::before { opacity: 1; }
+    .proj-card:hover::after  { opacity: 1; }
+
+    .proj-icon {
+      font-size: 2rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 8px rgba(219,39,119,.4));
+    }
+    .proj-meta {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+    .proj-name {
+      font-size: .98rem;
+      font-weight: 700;
+      color: rgba(255,255,255,.9);
+      letter-spacing: -.01em;
+    }
+    .proj-badge {
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      padding: 2px 8px;
+      border-radius: 20px;
+      background: rgba(124,58,237,.25);
+      border: 1px solid rgba(124,58,237,.4);
+      color: rgba(167,139,250,.9);
+    }
+    .proj-badge.green {
+      background: rgba(16,185,129,.2);
+      border-color: rgba(16,185,129,.35);
+      color: rgba(52,211,153,.9);
+    }
+    .proj-desc {
+      font-size: .82rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,.38);
+      flex: 1;
+    }
+    .proj-arrow {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .78rem;
+      color: rgba(167,139,250,.55);
+      font-weight: 500;
+      transition: gap .2s, color .2s;
+    }
+    .proj-card:hover .proj-arrow {
+      gap: 9px;
+      color: rgba(167,139,250,.9);
     }
   </style>
 </head>
@@ -288,18 +408,12 @@
   <div class="blob b4"></div>
   <canvas id="stars"></canvas>
 
-  <!-- Shooting stars -->
-  <div class="shoot" style="top:15%;left:10%">
-    <span style="animation-delay:0s"></span>
-  </div>
-  <div class="shoot" style="top:35%;left:60%">
-    <span style="animation-delay:-1.5s"></span>
-  </div>
-  <div class="shoot" style="top:5%;left:75%">
-    <span style="animation-delay:-2.8s"></span>
-  </div>
+  <div class="shoot" style="top:15%;left:10%"><span style="animation-delay:0s"></span></div>
+  <div class="shoot" style="top:35%;left:60%"><span style="animation-delay:-1.5s"></span></div>
+  <div class="shoot" style="top:5%;left:75%"><span style="animation-delay:-2.8s"></span></div>
 
-  <div class="card">
+  <!-- Profile card -->
+  <div class="card" id="profile-card">
     <div class="avatar-wrap">
       <div class="avatar-glow"></div>
       <div class="avatar-ring"></div>
@@ -308,8 +422,7 @@
            src="https://github.com/sorrowfeng.png"
            alt="sorrowfeng"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <!-- Fallback monogram -->
-      <div style="display:none;position:relative;z-index:2;width:104px;height:104px;border-radius:50%;border:3px solid #080818;background:linear-gradient(135deg,#7c3aed,#2563eb);align-items:center;justify-content:center;font-size:2.2rem;font-weight:800;color:#fff;letter-spacing:-.04em;">S</div>
+      <div style="display:none;position:relative;z-index:2;width:104px;height:104px;border-radius:50%;border:3px solid #080818;background:linear-gradient(135deg,#7c3aed,#2563eb);align-items:center;justify-content:center;font-size:2.2rem;font-weight:800;color:#fff;">S</div>
     </div>
 
     <div class="name">sorrowfeng</div>
@@ -331,8 +444,31 @@
         GitHub
       </a>
     </div>
+  </div>
 
-    <div class="divider"></div>
+  <!-- Projects section -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-title">Projects</span>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects">
+      <a class="proj-card" href="https://www.sorrowfeng.top/mahjong-go/" target="_blank" rel="noopener">
+        <div class="proj-icon">🀄</div>
+        <div class="proj-meta">
+          <span class="proj-name">麻将消消乐</span>
+          <span class="proj-badge green">Open Source</span>
+        </div>
+        <div class="proj-desc">复刻经典麻将趣味消除，支持拖拽滑牌、连锁消除、撤销与智能提示，全平台可玩。</div>
+        <div class="proj-arrow">
+          Play now
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+    </div>
   </div>
 
   <script>
@@ -341,28 +477,16 @@
       const c = document.getElementById('stars');
       const ctx = c.getContext('2d');
       let W, H, pts = [];
-
-      function resize() {
-        W = c.width = window.innerWidth;
-        H = c.height = window.innerHeight;
-      }
-
+      function resize() { W = c.width = window.innerWidth; H = c.height = window.innerHeight; }
       function Star() {
-        this.x = Math.random() * W;
-        this.y = Math.random() * H;
+        this.x = Math.random() * W; this.y = Math.random() * H;
         this.r = Math.random() * 1.2 + 0.2;
-        this.vx = (Math.random() - 0.5) * 0.15;
-        this.vy = (Math.random() - 0.5) * 0.15;
+        this.vx = (Math.random() - 0.5) * 0.15; this.vy = (Math.random() - 0.5) * 0.15;
         this.a = Math.random() * 0.6 + 0.1;
         this.flicker = Math.random() * Math.PI * 2;
         this.flickerSpeed = Math.random() * 0.02 + 0.005;
       }
-
-      function init() {
-        resize();
-        pts = Array.from({ length: 120 }, () => new Star());
-      }
-
+      function init() { resize(); pts = Array.from({ length: 120 }, () => new Star()); }
       function tick() {
         ctx.clearRect(0, 0, W, H);
         pts.forEach(p => {
@@ -371,29 +495,20 @@
           if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
           p.flicker += p.flickerSpeed;
           const alpha = p.a * (0.7 + 0.3 * Math.sin(p.flicker));
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255,255,255,${alpha})`;
-          ctx.fill();
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255,255,255,${alpha})`; ctx.fill();
         });
         requestAnimationFrame(tick);
       }
-
       window.addEventListener('resize', resize);
-      init();
-      tick();
+      init(); tick();
     })();
 
     /* ── Typewriter ── */
     (function () {
-      const lines = [
-        'Developer & Builder',
-        'Open Source Enthusiast',
-        'Always learning.',
-      ];
+      const lines = ['Developer & Builder', 'Open Source Enthusiast', 'Always learning.'];
       const el = document.getElementById('typed');
       let li = 0, ci = 0, deleting = false, wait = 0;
-
       function step() {
         const cur = lines[li];
         if (!deleting) {
@@ -406,21 +521,20 @@
         }
         setTimeout(step, deleting ? 38 : 72);
       }
-
       setTimeout(step, 900);
     })();
 
-    /* ── Card mouse parallax ── */
+    /* ── Profile card parallax (desktop only) ── */
     (function () {
-      const card = document.querySelector('.card');
-      document.addEventListener('mousemove', e => {
-        const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
-        const dx = (e.clientX - cx) / cx, dy = (e.clientY - cy) / cy;
-        card.style.transform = `perspective(800px) rotateY(${dx * 5}deg) rotateX(${-dy * 5}deg)`;
-      });
-      document.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-      });
+      const card = document.getElementById('profile-card');
+      if (window.matchMedia('(hover: hover)').matches) {
+        document.addEventListener('mousemove', e => {
+          const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
+          const dx = (e.clientX - cx) / cx, dy = (e.clientY - cy) / cy;
+          card.style.transform = `perspective(800px) rotateY(${dx * 4}deg) rotateX(${-dy * 4}deg)`;
+        });
+        document.addEventListener('mouseleave', () => { card.style.transform = ''; });
+      }
     })();
   </script>
 </body>
