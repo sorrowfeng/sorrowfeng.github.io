@@ -349,9 +349,20 @@
     .proj-card:hover::after  { opacity: 1; }
 
     .proj-icon {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 2rem;
       line-height: 1;
       filter: drop-shadow(0 0 8px rgba(219,39,119,.4));
+    }
+    .proj-icon img {
+      width: 42px;
+      height: 42px;
+      display: block;
+      object-fit: contain;
     }
     .proj-meta {
       display: flex;
@@ -499,7 +510,9 @@
       </div>
 
       <div class="proj-card" onclick="window.open('https://github.com/sorrowfeng/qt-ant-design','_blank','noopener')">
-        <div class="proj-icon">◆</div>
+        <div class="proj-icon">
+          <img src="assets/qt-ant-design-icon.png" alt="" loading="lazy">
+        </div>
         <div class="proj-meta">
           <span class="proj-name">qt-ant-design</span>
           <a class="proj-badge green" href="https://github.com/sorrowfeng/qt-ant-design" target="_blank" rel="noopener" onclick="event.stopPropagation()">Open Source</a>
