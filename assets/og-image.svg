@@ -1,0 +1,40 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="0.52" stop-color="#EEF8F4"/>
+      <stop offset="1" stop-color="#FFF6F3"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="156" y1="124" x2="714" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2F6DF6"/>
+      <stop offset="0.55" stop-color="#24B47E"/>
+      <stop offset="1" stop-color="#F0445E"/>
+    </linearGradient>
+    <filter id="shadow" x="72" y="58" width="1056" height="514" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="42" flood-color="#213052" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <path d="M0 0H1200V630H0V0Z" fill="url(#bg)"/>
+  <g opacity="0.36">
+    <path d="M0 126H1200M0 252H1200M0 378H1200M0 504H1200M120 0V630M240 0V630M360 0V630M480 0V630M600 0V630M720 0V630M840 0V630M960 0V630M1080 0V630" stroke="#2F6DF6" stroke-opacity="0.09"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="118" y="108" width="964" height="414" rx="18" fill="white" fill-opacity="0.86"/>
+    <rect x="118" y="108" width="6" height="414" rx="3" fill="url(#accent)"/>
+    <circle cx="248" cy="258" r="66" fill="url(#accent)"/>
+    <circle cx="248" cy="258" r="54" fill="#F7F9FC"/>
+    <text x="248" y="282" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="800" fill="#2F6DF6">S</text>
+    <text x="352" y="230" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="800" fill="#182033">Sorrowfeng</text>
+    <text x="356" y="286" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#4A5568">Developer &amp; Open Source Projects</text>
+    <text x="356" y="344" font-family="Arial, Helvetica, sans-serif" font-size="23" fill="#667085">Mahjong Go · qt-ant-design · C++ · Qt Widgets</text>
+    <g transform="translate(356 388)">
+      <rect width="154" height="44" rx="12" fill="#E9F2FF"/>
+      <text x="77" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#2F6DF6">GitHub Pages</text>
+    </g>
+    <g transform="translate(528 388)">
+      <rect width="132" height="44" rx="12" fill="#E8F7F0"/>
+      <text x="66" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#15835C">Open Source</text>
+    </g>
+  </g>
+</svg>
